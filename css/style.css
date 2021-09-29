@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Karla", sans-serif;
+  line-height: 1;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.shadow {
+  width: 100%;
+  height: 200px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0))) !important;
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0)) !important;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+}
+
+.main {
+  height: 740px;
+  background-image: url("../img/hero.webp");
+  background-size: cover;
+  background-position-y: bottom;
+}
+
+.main .container {
+  position: relative;
+}
+
+.main .container .header {
+  height: 80px;
+  width: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .container .header .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .container .header ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container .header ul li {
+  line-height: 1.4;
+  margin-left: 30px;
+}
+
+.main .container .header ul li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main .container .header ul li a:hover {
+  opacity: 0.8;
+}
+
+.main .container .header ul li a .active {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -12px;
+  opacity: 1;
+}
+
+.main .container .header ul li:first {
+  margin-left: 0px;
+}
+
+.main .container .header .profile {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main .container .header .profile a {
+  padding: 12px;
+  border-radius: 30px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container .header .profile a .svg_country {
+  width: 18px;
+  height: 16px;
+}
+
+.main .container .header .profile a .svg_country path {
+  fill: #fff;
+}
+
+.main .container .header .profile a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.main .container .header .profile .active_profile {
+  background-color: #fff;
+  padding: 3px 6px 3px 9px;
+  margin-left: 10px;
+}
+
+.main .container .header .profile .active_profile .svg_threeline {
+  height: 11px;
+}
+
+.main .container .header .profile .active_profile .svg_profile {
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.main .container .header .profile .active_profile .svg_profile path {
+  fill: gray;
+}
+
+.main .container .header .profile .active_profile:hover {
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
