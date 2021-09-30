@@ -238,6 +238,58 @@ body {
         font-size: 19px;
         letter-spacing: -0.5px;
         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+        transition: 0.3s box-shadow;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+          transition: 0.3s box-shadow;
+        }
+      }
+    }
+  }
+}
+
+.explore_nearby {
+  margin: 24px 0px;
+  .container {
+    .heading {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 52px;
+      margin-bottom: 16px;
+    }
+    .cities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: row;
+      gap: 16px;
+      .city {
+        display: flex;
+        padding: 0xp 8px;
+        flex: 1;
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 8px;
+          margin-right: 16px;
+        }
+        .city_details {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .city_name {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 500;
+          }
+          .city_distance {
+            margin-top: 2px;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #222;
+          }
+        }
       }
     }
   }
