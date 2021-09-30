@@ -486,7 +486,7 @@ body {
 }
 
 .live_anywhere {
-  margin-top: 40px;
+  margin-top: 64px;
 }
 
 .live_anywhere .container .heading {
@@ -594,5 +594,88 @@ body {
   font-size: 16px;
   padding: 14px 24px;
   font-weight: 500;
+}
+
+.future_getaways {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.future_getaways .container .scope .heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 16px;
+}
+
+.future_getaways .container .scope nav {
+  border-bottom: 1px solid #dddddd;
+}
+
+.future_getaways .container .scope nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.future_getaways .container .scope nav ul li {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  color: #717171;
+}
+
+.future_getaways .container .scope nav ul li .bottom_border {
+  width: calc(100% - 20px);
+  background-color: black;
+  height: 2px;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.future_getaways .container .scope nav ul li:first-child {
+  margin-left: -10px;
+  color: #000;
+}
+
+.future_getaways .container .scope nav ul li:hover {
+  background-color: #f7f7f7;
+}
+
+.future_getaways .container .scope .cities {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  gap: 8px;
+}
+
+.future_getaways .container .scope .cities .city {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 0px;
+  margin: 8px 0px;
+}
+
+.future_getaways .container .scope .cities .city .city_name {
+  font-size: 14px;
+  color: #222222;
+}
+
+.future_getaways .container .scope .cities .city .city_state {
+  font-size: 14px;
+  padding-top: 2px;
+  color: #717171;
 }
 /*# sourceMappingURL=style.css.map */

@@ -296,7 +296,7 @@ body {
 }
 
 .live_anywhere {
-  margin-top: 40px;
+  margin-top: 64px;
   .container {
     .heading {
       font-size: 32px;
@@ -370,6 +370,73 @@ body {
           font-size: 16px;
           padding: 14px 24px;
           font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.future_getaways {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  .container {
+    .scope {
+      .heading {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 52px;
+        margin-bottom: 16px;
+      }
+      nav {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        ul {
+          display: flex;
+          li {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 8px;
+            color: #717171;
+            .bottom_border {
+              width: calc(100% - 20px);
+              background-color: black;
+              height: 2px;
+              margin-top: 10px;
+              position: absolute;
+            }
+            &:first-child {
+              margin-left: -10px;
+              color: #000;
+            }
+            &:hover {
+              background-color: #f7f7f7;
+            }
+          }
+        }
+      }
+      .cities {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: row;
+        gap: 8px;
+        .city {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          padding: 8px 0px;
+          margin: 8px 0px;
+          .city_name {
+            font-size: 14px;
+            color: rgb(34, 34, 34);
+          }
+          .city_state {
+            font-size: 14px;
+            padding-top: 2px;
+            color: rgb(113, 113, 113);
+          }
         }
       }
     }
