@@ -329,3 +329,49 @@ body {
     }
   }
 }
+
+.try_hosting {
+  margin-top: 64px;
+  .container {
+    .host_background {
+      height: 482px;
+      background-image: url("../img/host.webp");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding-left: 80px;
+      .details {
+        color: #fff;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        .host_heading {
+          font-size: 48px;
+          line-height: 1.2;
+        }
+        .host_details {
+          display: block;
+          font-size: 18px;
+          line-height: 1.4;
+          margin-top: 5px;
+          width: 350px;
+          font-weight: 300;
+        }
+        .host_learn_more_button {
+          margin-top: 40px;
+          background-color: #fff;
+          color: #000;
+          width: max-content;
+          border-radius: 5px;
+          font-size: 16px;
+          padding: 14px 24px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

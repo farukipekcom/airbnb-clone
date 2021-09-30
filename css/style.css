@@ -531,4 +531,68 @@ body {
   font-weight: 500;
   margin-top: 8px;
 }
+
+.try_hosting {
+  margin-top: 64px;
+}
+
+.try_hosting .container .host_background {
+  height: 482px;
+  background-image: url("../img/host.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 80px;
+}
+
+.try_hosting .container .host_background .details {
+  color: #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.try_hosting .container .host_background .details .host_heading {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.try_hosting .container .host_background .details .host_details {
+  display: block;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 5px;
+  width: 350px;
+  font-weight: 300;
+}
+
+.try_hosting .container .host_background .details .host_learn_more_button {
+  margin-top: 40px;
+  background-color: #fff;
+  color: #000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 14px 24px;
+  font-weight: 500;
+}
 /*# sourceMappingURL=style.css.map */
