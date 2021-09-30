@@ -26,6 +26,159 @@ body {
   padding-right: 90px;
 }
 
+.sticky_menu {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: #fff;
+  display: none;
+  -webkit-transition: 2s display;
+  transition: 2s display;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.09);
+}
+
+.sticky_menu .container {
+  height: 80px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sticky_menu .container .logo {
+  margin-right: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sticky_menu .container .logo a svg {
+  color: #ff385c;
+}
+
+.sticky_menu .container .input {
+  position: relative;
+}
+
+.sticky_menu .container .input input[type="text"]::-webkit-input-placeholder {
+  color: #333;
+}
+
+.sticky_menu .container .input input[type="text"]:-ms-input-placeholder {
+  color: #333;
+}
+
+.sticky_menu .container .input input[type="text"]::-ms-input-placeholder {
+  color: #333;
+}
+
+.sticky_menu .container .input input[type="text"]::placeholder {
+  color: #333;
+}
+
+.sticky_menu .container .input input[type="text"] {
+  width: 300px;
+  height: 48px;
+  border: 1px solid #dddddd;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0px 16px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sticky_menu .container .input svg {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: black;
+  background-color: #ff385c;
+  padding: 8px 6px;
+  height: 36px;
+  width: 36px;
+  border-radius: 50px;
+}
+
+.sticky_menu .container .input svg path {
+  stroke: #fff;
+}
+
+.sticky_menu .container .profile {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.sticky_menu .container .profile a {
+  padding: 12px;
+  border-radius: 30px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sticky_menu .container .profile a .svg_country {
+  width: 18px;
+  height: 16px;
+}
+
+.sticky_menu .container .profile a .svg_country path {
+  fill: #000;
+}
+
+.sticky_menu .container .profile a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sticky_menu .container .profile .active_profile {
+  background-color: #fff;
+  padding: 3px 6px 3px 9px;
+  margin-left: 10px;
+  border: 1px solid #dddddd;
+}
+
+.sticky_menu .container .profile .active_profile .svg_threeline {
+  height: 11px;
+}
+
+.sticky_menu .container .profile .active_profile .svg_profile {
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.sticky_menu .container .profile .active_profile .svg_profile path {
+  fill: gray;
+}
+
+.sticky_menu .container .profile .active_profile:hover {
+  background-color: #fff;
+}
+
 .shadow {
   width: 100%;
   height: 200px;
