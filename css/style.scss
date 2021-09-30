@@ -294,3 +294,38 @@ body {
     }
   }
 }
+
+.live_anywhere {
+  margin-top: 40px;
+  .container {
+    .heading {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 52px;
+      margin-bottom: 16px;
+    }
+    .stays {
+      display: flex;
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 33.333%;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        img {
+          width: 520px;
+          height: 520px;
+          border-radius: 10px;
+        }
+        .item_heading {
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

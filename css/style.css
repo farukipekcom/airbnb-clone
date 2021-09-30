@@ -484,4 +484,51 @@ body {
   font-weight: 400;
   color: #222;
 }
+
+.live_anywhere {
+  margin-top: 40px;
+}
+
+.live_anywhere .container .heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 16px;
+}
+
+.live_anywhere .container .stays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live_anywhere .container .stays .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 33.333%;
+  margin-right: 10px;
+}
+
+.live_anywhere .container .stays .item:last-child {
+  margin-right: 0px;
+}
+
+.live_anywhere .container .stays .item img {
+  width: 520px;
+  height: 520px;
+  border-radius: 10px;
+}
+
+.live_anywhere .container .stays .item .item_heading {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 8px;
+}
 /*# sourceMappingURL=style.css.map */
