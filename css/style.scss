@@ -291,7 +291,7 @@ body {
   }
 }
 
-.live_anywhere {
+.live_things {
   margin-top: 64px;
   .container {
     .heading {
@@ -308,6 +308,13 @@ body {
         justify-content: space-around;
         width: 33.333%;
         margin-right: 10px;
+        span {
+          font-size: 14px;
+          line-height: 1.2;
+          font-weight: 400;
+          margin-top: 5px;
+          color: #222;
+        }
         &:last-child {
           margin-right: 0px;
         }

@@ -485,24 +485,24 @@ body {
   color: #222;
 }
 
-.live_anywhere {
+.live_things {
   margin-top: 64px;
 }
 
-.live_anywhere .container .heading {
+.live_things .container .heading {
   font-size: 32px;
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 16px;
 }
 
-.live_anywhere .container .stays {
+.live_things .container .stays {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.live_anywhere .container .stays .item {
+.live_things .container .stays .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,17 +516,25 @@ body {
   margin-right: 10px;
 }
 
-.live_anywhere .container .stays .item:last-child {
+.live_things .container .stays .item span {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #222;
+}
+
+.live_things .container .stays .item:last-child {
   margin-right: 0px;
 }
 
-.live_anywhere .container .stays .item img {
+.live_things .container .stays .item img {
   width: 520px;
   height: 520px;
   border-radius: 10px;
 }
 
-.live_anywhere .container .stays .item .item_heading {
+.live_things .container .stays .item .item_heading {
   font-size: 18px;
   font-weight: 500;
   margin-top: 8px;
