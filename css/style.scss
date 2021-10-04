@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
+@import "./mixin.scss";
 
 * {
   padding: 0;
@@ -20,8 +21,20 @@ body {
 }
 .container {
   width: 100%;
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
+  @include mq("tablet") {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include mq("desktop") {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include mq("large") {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 .sticky_menu {
   width: 100%;
@@ -32,6 +45,7 @@ body {
   display: none;
   transition: 2s display;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.09);
+
   .container {
     height: 80px;
     color: #fff;
@@ -131,8 +145,6 @@ body {
   top: 0;
 }
 .main {
-  height: 800px;
-  background-image: url("../img/hero.webp");
   background-size: cover;
   background-position-y: bottom;
   .container {
@@ -140,25 +152,65 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 650px;
+    @include mq("mobile") {
+      height: 90vh;
+    }
+    @include mq("tablet") {
+      height: 650px;
+    }
+    @include mq("desktop") {
+      height: 580px;
+    }
+    @include mq("large") {
+      height: 790px;
+    }
+    .resim {
+      z-index: -2;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        object-position: center bottom;
+        vertical-align: bottom;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .header {
-      height: 80px;
       width: 100%;
       color: white;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: space-between;
+      height: 80px;
+      @include mq("tablet") {
+        display: flex;
+      }
       .logo {
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: flex-start;
       }
-
       ul {
         flex: 1;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
+        @include mq("desktop") {
+          display: flex;
+        }
         li {
           line-height: 1.4;
           margin-left: 30px;
@@ -170,6 +222,16 @@ body {
             flex-direction: column;
             align-items: center;
             position: relative;
+            margin-top: 20px;
+            @include mq("desktop") {
+              font-size: 14px;
+              font-weight: 400;
+              width: max-content;
+            }
+            @include mq("large") {
+              font-size: 17px;
+              font-weight: 300;
+            }
             &:hover {
               opacity: 0.8;
             }
@@ -192,10 +254,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
         a {
           padding: 12px;
           border-radius: 30px;
           color: #fff;
+          width: max-content;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -231,18 +295,102 @@ body {
         }
       }
     }
+    .menu {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      margin-top: -16px;
+      @include mq("tablet") {
+        display: flex;
+      }
+      @include mq("desktop") {
+        display: none;
+      }
+      li {
+        line-height: 1.4;
+        margin-left: 30px;
+        a {
+          color: #fff;
+          font-size: 17px;
+          font-weight: 300;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          &:hover {
+            opacity: 0.8;
+          }
+          .active {
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -12px;
+            opacity: 1;
+          }
+        }
+        &:first {
+          margin-left: 0px;
+        }
+      }
+    }
+    .mobile_form {
+      display: flex;
+      width: 100%;
+      padding: 16px 24px 0px 24px;
+      position: relative;
+      @include mq("tablet") {
+        display: none;
+      }
+      label {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        opacity: 1;
+        text-align: center;
+        color: #000;
+        width: calc(100% - 48px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        svg {
+          margin-right: 10px;
+          color: #ff385c;
+        }
+      }
+      input[type="text"] {
+        cursor: pointer;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 50px;
+        height: 48px;
+        z-index: 9;
+      }
+    }
     .form {
-      width: 850px;
+      // width: 850px;
+      width: 100%;
+      max-width: 850px;
       height: 66px;
       background-color: #fff;
       border-radius: 50px;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: flex-start;
       margin: 0 auto;
-      .active {
-        box-shadow: 6px 0px 20px rgba(#000, 0.1);
+
+      @include mq("tablet") {
+        display: flex;
       }
+      .seperator {
+        width: 1px;
+        height: 30px;
+        background-color: #dddddd;
+      }
+
       .form_item {
         display: flex;
         flex-direction: column;
@@ -257,7 +405,6 @@ body {
         padding-left: 30px;
         justify-content: center;
         cursor: pointer;
-
         &:hover {
           background-color: rgba(#f1f1f1, 0.7);
         }
@@ -265,6 +412,7 @@ body {
           margin-top: 5px;
           background-color: transparent;
           cursor: pointer;
+          width: 100%;
         }
         input[type="text"]::placeholder {
           font-size: 14px;
@@ -272,16 +420,21 @@ body {
           font-weight: 400;
           color: #222;
           opacity: 0.6;
+          white-space: normal;
           letter-spacing: 0.3px;
         }
       }
       .input1 {
-        flex: 2;
+        flex: 1;
+        @include mq("desktop") {
+          flex: 2;
+        }
       }
       .input4 {
         display: flex;
         flex-direction: row;
         align-items: center;
+        flex: 1.5;
         .item {
           display: flex;
           flex-direction: column;
@@ -293,7 +446,7 @@ body {
           justify-content: center;
           background-color: #ff385c;
           color: #fff;
-          width: 48px;
+          min-width: 48px;
           height: 48px;
           padding-left: 0px;
           margin-right: 10px;
@@ -313,15 +466,34 @@ body {
       flex-direction: column;
       align-items: center;
       margin-top: 270px;
+      @include mq("mobile") {
+        margin-top: 350px;
+      }
+      @include mq("tablet") {
+        margin-top: 230px;
+      }
+      @include mq("desktop") {
+        margin-top: 150px;
+      }
+      @include mq("large") {
+        margin-top: 270px;
+      }
       h3 {
         font-size: 19px;
         font-weight: 600;
-        line-height: 1.4;
+        line-height: 1.2;
         font-weight: 500;
+        width: 200px;
+        text-align: center;
+        @include mq("tablet") {
+          width: 100%;
+          text-align: center;
+        }
       }
       .flex_button {
-        width: 200px;
-        height: 64px;
+        height: 50px;
+        padding-left: 32px;
+        padding-right: 32px;
         margin-top: 16px;
         background-color: #fff;
         border-radius: 38px;
@@ -335,9 +507,56 @@ body {
         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
         transition: 0.3s box-shadow;
         cursor: pointer;
+        @include mq("tablet") {
+          width: 200px;
+          height: 64px;
+        }
         &:hover {
           box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
           transition: 0.3s box-shadow;
+        }
+      }
+    }
+    .bottom_menu {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 64px;
+      border-top: 1px solid #dddddd;
+      background-color: #fff;
+      display: none;
+
+      .menu_items {
+        display: flex;
+        justify-content: center;
+        height: 64px;
+        .active {
+          svg {
+            color: #ff385c;
+          }
+          span {
+            color: #ff385c;
+          }
+        }
+        .menu_item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          max-width: 20%;
+          min-width: 0px;
+          flex: 1 1 0px;
+          color: #717171;
+          cursor: pointer;
+          &:hover {
+            color: #ff385c;
+          }
+          span {
+            font-size: 10px;
+            font-weight: 600;
+            margin-top: 6px;
+          }
         }
       }
     }
@@ -406,7 +625,7 @@ body {
         flex-direction: column;
         justify-content: space-around;
         width: 33.333%;
-        margin-right: 10px;
+        margin-right: 20px;
         span {
           font-size: 14px;
           line-height: 1.2;
@@ -418,7 +637,7 @@ body {
           margin-right: 0px;
         }
         img {
-          width: 520px;
+          width: 100%;
           height: 520px;
           border-radius: 10px;
         }

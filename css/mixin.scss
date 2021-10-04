@@ -1,0 +1,25 @@
+@mixin mq($width: "mobile") {
+  @if ($width == "mobile") {
+    @media (min-width: 560px) {
+      @content;
+    }
+  } @else if ($width == "tablet") {
+    @media (min-width: 744px) {
+      @content;
+    }
+  } @else if ($width == "desktop") {
+    @media (min-width: 950px) {
+      @content;
+    }
+  } @else if ($width == "large") {
+    @media (min-width: 1111px) {
+      @content;
+    }
+  }
+}
+
+// TODO: HTML ve webkit scrollbar'i sadece mobil gorunume gectiginde aktiflestirmen lazim. Diger turlu sadece varsayilan calismali.
+
+// TODO: 728'den sonra mobil tetikleniyor
+// TODO: 934'den sonra da tetikleniyor
+// TODO: 1111'den sonra da tetikleniyor
