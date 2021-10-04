@@ -31,8 +31,8 @@ body {
 
 .container {
   width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 @media (min-width: 744px) {
@@ -224,6 +224,8 @@ body {
 }
 
 .main .container {
+  padding-left: 0px;
+  padding-right: 0px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,6 +238,27 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 650px;
+}
+
+@media (min-width: 744px) {
+  .main .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 950px) {
+  .main .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1111px) {
+  .main .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 @media (min-width: 560px) {
@@ -925,16 +948,7 @@ body {
   margin-top: 6px;
 }
 
-.explore_nearby {
-  margin: 24px 0px;
-}
-
-.explore_nearby .container {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.explore_nearby .container .heading {
+.heading {
   font-size: 22px;
   font-weight: 700;
   line-height: 52px;
@@ -942,15 +956,19 @@ body {
 }
 
 @media (min-width: 744px) {
-  .explore_nearby .container .heading {
+  .heading {
     font-size: 26px;
   }
 }
 
 @media (min-width: 950px) {
-  .explore_nearby .container .heading {
+  .heading {
     font-size: 32px;
   }
+}
+
+.explore_nearby {
+  margin: 24px 0px;
 }
 
 .explore_nearby .container .cities {
@@ -965,7 +983,6 @@ body {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  border-radius: 5px;
 }
 
 @media (min-width: 744px) {
@@ -1054,17 +1071,26 @@ body {
   margin-top: 64px;
 }
 
-.live_things .container .heading {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 52px;
-  margin-bottom: 16px;
-}
-
 .live_things .container .stays {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 100%;
+  overflow: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 744px) {
+  .live_things .container .stays {
+    max-width: unset;
+    overflow: unset;
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+    -webkit-overflow-scrolling: unset;
+    border-radius: unset;
+  }
 }
 
 .live_things .container .stays .item {
@@ -1077,8 +1103,19 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 33.333%;
   margin-right: 20px;
+  width: 280px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 744px) {
+  .live_things .container .stays .item {
+    width: 100%;
+    scroll-snap-align: unset;
+  }
 }
 
 .live_things .container .stays .item span {
@@ -1094,9 +1131,16 @@ body {
 }
 
 .live_things .container .stays .item img {
-  width: 100%;
-  height: 520px;
+  height: 272px;
+  width: 272px;
   border-radius: 10px;
+}
+
+@media (min-width: 744px) {
+  .live_things .container .stays .item img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .live_things .container .stays .item .item_heading {
