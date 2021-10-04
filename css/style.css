@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
+html {
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -574,6 +583,7 @@ body {
   background-color: #fff;
   border-radius: 50px;
   height: 48px;
+  z-index: 9;
 }
 
 .main .container .form {
@@ -920,6 +930,11 @@ body {
   margin: 24px 0px;
 }
 
+.explore_nearby .container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .explore_nearby .container .heading {
   font-size: 32px;
   font-weight: 700;
@@ -934,6 +949,23 @@ body {
       grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row;
   gap: 16px;
+  max-width: 100%;
+  overflow: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 5px;
+}
+
+@media (min-width: 744px) {
+  .explore_nearby .container .cities {
+    max-width: unset;
+    overflow: unset;
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+    -webkit-overflow-scrolling: unset;
+    border-radius: unset;
+  }
 }
 
 .explore_nearby .container .cities .city {
@@ -941,9 +973,21 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0xp 8px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 280px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 744px) {
+  .explore_nearby .container .cities .city {
+    width: unset;
+    scroll-snap-align: unset;
+  }
 }
 
 .explore_nearby .container .cities .city img {
@@ -951,6 +995,20 @@ body {
   height: 64px;
   border-radius: 8px;
   margin-right: 16px;
+}
+
+@media (min-width: 744px) {
+  .explore_nearby .container .cities .city img {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (min-width: 950px) {
+  .explore_nearby .container .cities .city img {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .explore_nearby .container .cities .city .city_details {
@@ -964,6 +1022,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .explore_nearby .container .cities .city .city_details .city_name {
