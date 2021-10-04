@@ -373,7 +373,6 @@ body {
         background-color: #fff;
         border-radius: 50px;
         height: 48px;
-        z-index: 9;
       }
     }
     .form {
@@ -577,10 +576,16 @@ body {
     @include mq("tablet") {
     }
     .heading {
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 700;
       line-height: 52px;
       margin-bottom: 16px;
+      @include mq("tablet") {
+        font-size: 26px;
+      }
+      @include mq("desktop") {
+        font-size: 32px;
+      }
     }
     .cities {
       display: grid;
@@ -613,8 +618,8 @@ body {
           scroll-snap-align: unset;
         }
         img {
-          width: 64px;
-          height: 64px;
+          width: 72px;
+          height: 72px;
           border-radius: 8px;
           margin-right: 16px;
           @include mq("tablet") {
@@ -622,8 +627,8 @@ body {
             height: 54px;
           }
           @include mq("desktop") {
-            width: 64px;
-            height: 64px;
+            width: 72px;
+            height: 72px;
           }
         }
         .city_details {

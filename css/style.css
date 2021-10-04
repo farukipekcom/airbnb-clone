@@ -583,7 +583,6 @@ body {
   background-color: #fff;
   border-radius: 50px;
   height: 48px;
-  z-index: 9;
 }
 
 .main .container .form {
@@ -936,10 +935,22 @@ body {
 }
 
 .explore_nearby .container .heading {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 16px;
+}
+
+@media (min-width: 744px) {
+  .explore_nearby .container .heading {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 950px) {
+  .explore_nearby .container .heading {
+    font-size: 32px;
+  }
 }
 
 .explore_nearby .container .cities {
@@ -991,8 +1002,8 @@ body {
 }
 
 .explore_nearby .container .cities .city img {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 8px;
   margin-right: 16px;
 }
@@ -1006,8 +1017,8 @@ body {
 
 @media (min-width: 950px) {
   .explore_nearby .container .cities .city img {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
   }
 }
 
