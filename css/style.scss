@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
 @import "./mixin.scss";
 html {
-  overflow: scroll;
+  // overflow: scroll;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -922,21 +922,56 @@ body {
   padding-top: 48px;
   background-color: #f7f7f7;
   border-top: 1px solid #dddddd;
+  // padding-bottom: 48px;
   .container {
     .footer_top {
-      padding-bottom: 48px;
       display: flex;
+      flex-direction: column;
+      @include mq("desktop") {
+        flex-direction: column;
+      }
+      @include mq("large") {
+        flex-direction: row;
+      }
       .column {
         flex: 1;
+        border-bottom: 1px solid #dddddd;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        &:last-child {
+          border: none;
+        }
+        @include mq("large") {
+          border: none;
+        }
+        &:first-child {
+          padding-top: 0px;
+        }
         .footer_heading {
           font-size: 13px;
           color: #222;
           font-weight: 700;
           padding-bottom: 10px;
+          margin-bottom: 12px;
         }
         ul {
+          @include mq("tablet") {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: row;
+            gap: 12px;
+          }
+          @include mq("large") {
+            display: block;
+          }
           li {
             margin-top: 16px;
+            @include mq("tablet") {
+              margin-top: 0px;
+            }
+            @include mq("large") {
+              margin-top: 16px;
+            }
             a {
               color: #333;
               font-size: 14px;
@@ -950,50 +985,103 @@ body {
       }
     }
     .footer_bottom {
+      padding-top: 20px;
       border-top: 1px solid #dddddd;
-      height: 70px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column-reverse;
+      @include mq("tablet") {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
+      @include mq("large") {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 69px;
+        padding-bottom: 20px;
+      }
       .left {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @include mq("tablet") {
+          flex-direction: column;
+          align-items: center;
+        }
+        @include mq("large") {
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 0px;
+        }
         span {
           font-size: 14px;
           line-height: 18px;
           letter-spacing: 0.5px;
           color: #222222;
+          margin-top: 20px;
+          @include mq("large") {
+            margin-top: 0px;
+          }
         }
         ul {
           display: flex;
+          margin-top: 5px;
+          @include mq("large") {
+            margin-top: 0px;
+          }
           li {
             font-size: 14px;
             line-height: 18px;
             color: #222222;
-            margin-left: 12px;
+
+            &:first-child::before {
+              content: "";
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+            &::before {
+              content: "·";
+              margin-right: 10px;
+              margin-left: 10px;
+            }
           }
         }
       }
       .right {
         display: flex;
-        .icon {
+        flex-direction: column;
+        @include mq("tablet") {
+          flex-direction: row;
+        }
+        .icons {
           display: flex;
-          align-items: center;
-          margin-right: 24px;
-          svg {
-            height: 16px;
-            width: 16px;
-          }
-          span {
-            margin-left: 8px;
-            text-decoration: underline;
-            font-size: 14px;
-            font-weight: 600;
+          flex-direction: row;
+
+          .icon {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+            flex-direction: row;
+
+            svg {
+              height: 16px;
+              width: 16px;
+            }
+            span {
+              margin-left: 8px;
+              text-decoration: underline;
+              font-size: 14px;
+              font-weight: 600;
+            }
           }
         }
         .social {
-          display: flex;
+          display: none;
           align-items: center;
+          @include mq("tablet") {
+            display: flex;
+          }
           svg {
             margin-left: 24px;
           }
