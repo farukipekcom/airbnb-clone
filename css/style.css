@@ -948,19 +948,20 @@ body {
 .heading {
   font-size: 22px;
   font-weight: 700;
-  line-height: 52px;
   margin-bottom: 16px;
 }
 
 @media (min-width: 744px) {
   .heading {
     font-size: 26px;
+    margin-bottom: 16px;
   }
 }
 
 @media (min-width: 950px) {
   .heading {
     font-size: 32px;
+    margin-bottom: 32px;
   }
 }
 
@@ -1131,6 +1132,8 @@ body {
 .live_things .container .stays .item img {
   height: 272px;
   width: 272px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 

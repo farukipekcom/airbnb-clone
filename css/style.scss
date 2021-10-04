@@ -584,13 +584,14 @@ body {
 .heading {
   font-size: 22px;
   font-weight: 700;
-  line-height: 52px;
   margin-bottom: 16px;
   @include mq("tablet") {
     font-size: 26px;
+    margin-bottom: 16px;
   }
   @include mq("desktop") {
     font-size: 32px;
+    margin-bottom: 32px;
   }
 }
 .explore_nearby {
@@ -704,6 +705,7 @@ body {
         img {
           height: 272px;
           width: 272px;
+          object-fit: cover;
           @include mq("tablet") {
             width: 100%;
             height: 100%;
