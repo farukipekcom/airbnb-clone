@@ -686,6 +686,7 @@ body {
         width: 280px;
         align-items: center;
         scroll-snap-align: start;
+        text-align: center;
         @include mq("tablet") {
           width: 100%;
           scroll-snap-align: unset;
@@ -694,8 +695,8 @@ body {
           font-size: 14px;
           line-height: 1.2;
           font-weight: 400;
-          margin-top: 5px;
           color: #222;
+          height: 100%;
         }
         &:last-child {
           margin-right: 0px;
@@ -841,17 +842,18 @@ body {
   margin-bottom: 64px;
   .container {
     .scope {
-      .heading {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 52px;
-        margin-bottom: 16px;
-      }
       nav {
         border-bottom: 1px solid rgb(221, 221, 221);
+        height: 34px;
         ul {
+          max-width: 100%;
+          overflow: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
           display: flex;
           li {
+            margin-right: 0px;
+            scroll-snap-align: start;
             font-size: 14px;
             font-weight: 500;
             padding: 10px;
@@ -860,12 +862,17 @@ body {
             position: relative;
             border-radius: 8px;
             color: #717171;
+            min-width: max-content;
+            @include mq("tablet") {
+              margin-right: 20px;
+            }
             .bottom_border {
               width: calc(100% - 20px);
               background-color: black;
               height: 2px;
               margin-top: 10px;
               position: absolute;
+              bottom: 0px;
             }
             &:first-child {
               margin-left: -10px;
@@ -879,9 +886,18 @@ body {
       }
       .cities {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-flow: row;
         gap: 8px;
+        @include mq("tablet") {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include mq("desktop") {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include mq("large") {
+          grid-template-columns: repeat(4, 1fr);
+        }
         .city {
           cursor: pointer;
           display: flex;
