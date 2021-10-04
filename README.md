@@ -6,7 +6,7 @@ I redesigned the **Airbnb** website as Html & Css.
 
   </br>
 <a href='https://airbnb-clone-farukipekcom.vercel.app/'>
-  <img src='https://user-images.githubusercontent.com/7412645/135257029-e7ba5e7b-0375-44f6-8ffe-c780658d07cc.jpg' width="1295" />
+  <img src='https://user-images.githubusercontent.com/7412645/135876538-1b249645-f1ac-43a3-98ad-90031f53479b.jpg' width="1295" />
 </a>
 
 ## Author
