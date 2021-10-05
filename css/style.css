@@ -200,13 +200,15 @@ body {
 }
 
 .sticky_menu .container .profile2 a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #f7f7f7;
 }
 
 .sticky_menu .container .profile2 .active_profile {
   background-color: #fff;
   padding: 3px 6px 3px 9px;
   margin-left: 10px;
+  max-height: 42px;
+  height: 70px;
   border: 1px solid #dddddd;
 }
 
@@ -475,6 +477,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 15px;
+  margin-left: 12px;
 }
 
 .main .container .header .profile a .svg_country {
@@ -493,7 +497,8 @@ body {
 .main .container .header .profile .active_profile {
   background-color: #fff;
   padding: 3px 6px 3px 9px;
-  margin-left: 10px;
+  max-height: 42px;
+  height: 70px;
 }
 
 .main .container .header .profile .active_profile .svg_threeline {
@@ -543,6 +548,7 @@ body {
 .main .container .menu li {
   line-height: 1.4;
   margin-left: 30px;
+  height: 40px;
 }
 
 .main .container .menu li a {
@@ -560,6 +566,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin-top: 0px;
 }
 
 .main .container .menu li a:hover {
@@ -1231,6 +1238,8 @@ body {
   font-weight: 400;
   color: #222;
   height: 100%;
+  width: 100%;
+  text-align: left;
 }
 
 .live_things .container .stays .item:last-child {
