@@ -1104,7 +1104,7 @@ body {
   }
 }
 
-.explore_nearby .container .cities .city {
+.explore_nearby .container .cities .city a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,16 +1117,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   scroll-snap-align: start;
+  color: #222;
 }
 
 @media (min-width: 744px) {
-  .explore_nearby .container .cities .city {
+  .explore_nearby .container .cities .city a {
     width: unset;
     scroll-snap-align: unset;
   }
 }
 
-.explore_nearby .container .cities .city img {
+.explore_nearby .container .cities .city a img {
   width: 72px;
   height: 72px;
   border-radius: 8px;
@@ -1134,20 +1135,20 @@ body {
 }
 
 @media (min-width: 744px) {
-  .explore_nearby .container .cities .city img {
+  .explore_nearby .container .cities .city a img {
     width: 54px;
     height: 54px;
   }
 }
 
 @media (min-width: 950px) {
-  .explore_nearby .container .cities .city img {
+  .explore_nearby .container .cities .city a img {
     width: 72px;
     height: 72px;
   }
 }
 
-.explore_nearby .container .cities .city .city_details {
+.explore_nearby .container .cities .city a .city_details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1161,13 +1162,13 @@ body {
   width: 100%;
 }
 
-.explore_nearby .container .cities .city .city_details .city_name {
+.explore_nearby .container .cities .city a .city_details .city_name {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 500;
 }
 
-.explore_nearby .container .cities .city .city_details .city_distance {
+.explore_nearby .container .cities .city a .city_details .city_distance {
   margin-top: 2px;
   font-size: 16px;
   line-height: 1.2;
@@ -1188,6 +1189,7 @@ body {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  margin-top: 0px;
 }
 
 .live_things .container .stays::-webkit-scrollbar {
@@ -1206,7 +1208,7 @@ body {
   }
 }
 
-.live_things .container .stays .item {
+.live_things .container .stays a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1226,13 +1228,25 @@ body {
 }
 
 @media (min-width: 744px) {
-  .live_things .container .stays .item {
+  .live_things .container .stays a {
     width: 100%;
     scroll-snap-align: unset;
   }
 }
 
-.live_things .container .stays .item span {
+.live_things .container .stays a .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.live_things .container .stays a .item span {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -1242,11 +1256,11 @@ body {
   text-align: left;
 }
 
-.live_things .container .stays .item:last-child {
+.live_things .container .stays a .item:last-child {
   margin-right: 0px;
 }
 
-.live_things .container .stays .item img {
+.live_things .container .stays a .item img {
   height: 272px;
   width: 272px;
   -o-object-fit: cover;
@@ -1255,16 +1269,17 @@ body {
 }
 
 @media (min-width: 744px) {
-  .live_things .container .stays .item img {
+  .live_things .container .stays a .item img {
     width: 100%;
     height: 100%;
   }
 }
 
-.live_things .container .stays .item .item_heading {
+.live_things .container .stays a .item .item_heading {
   font-size: 18px;
   font-weight: 500;
   margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .try_hosting {
