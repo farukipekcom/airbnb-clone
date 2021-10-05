@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
 @import "./mixin.scss";
-html {
-  // overflow: scroll;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
+
 * {
   padding: 0;
   margin: 0;
@@ -51,28 +45,38 @@ body {
   display: none;
   transition: 2s display;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.09);
-
   .container {
     height: 80px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    .logo {
+    .logo2 {
       flex: 1;
+      display: none;
+      @include mq("tablet") {
+        display: flex;
+      }
       a {
         svg {
           color: #ff385c;
         }
       }
     }
-    .input {
+    .input2 {
       position: relative;
+      width: 100%;
+      @include mq("tablet") {
+        width: unset;
+      }
       input[type="text"]::placeholder {
         color: #333;
       }
       input[type="text"] {
-        width: 300px;
+        width: 100%;
+        @include mq("tablet") {
+          width: 300px;
+        }
         height: 48px;
         border: 1px solid #dddddd;
         border-radius: 40px;
@@ -96,11 +100,14 @@ body {
         }
       }
     }
-    .profile {
+    .profile2 {
       flex: 1;
-      display: flex;
       align-items: center;
       justify-content: flex-end;
+      display: none;
+      @include mq("tablet") {
+        display: flex;
+      }
       a {
         padding: 12px;
         border-radius: 30px;
@@ -355,6 +362,46 @@ body {
         }
       }
     }
+    .menu2 {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      margin-top: -16px;
+      @include mq("tablet") {
+        display: flex;
+      }
+      @include mq("desktop") {
+        display: none;
+      }
+      li {
+        line-height: 1.4;
+        margin-left: 30px;
+        a {
+          color: #fff;
+          font-size: 17px;
+          font-weight: 300;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          &:hover {
+            opacity: 0.8;
+          }
+          .active {
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -12px;
+            opacity: 1;
+          }
+        }
+        &:first {
+          margin-left: 0px;
+        }
+      }
+    }
     .mobile_form {
       display: flex;
       width: 100%;
@@ -389,93 +436,96 @@ body {
         height: 48px;
       }
     }
-    .form {
-      // width: 850px;
-      width: 100%;
-      max-width: 850px;
-      height: 66px;
-      background-color: #fff;
-      border-radius: 50px;
-      display: none;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 0 auto;
-
-      @include mq("tablet") {
-        display: flex;
-      }
-      .seperator {
-        width: 1px;
-        height: 30px;
-        background-color: #dddddd;
-      }
-
-      .form_item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 1;
-        font-size: 13px;
-        line-height: 16px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
+    .formm {
+      width: 850px;
+      .form {
+        // width: 850px;
+        width: 100%;
+        max-width: 850px;
         height: 66px;
+        background-color: #fff;
         border-radius: 50px;
-        padding-left: 30px;
-        justify-content: center;
-        cursor: pointer;
-        &:hover {
-          background-color: rgba(#f1f1f1, 0.7);
-        }
-        input[type="text"] {
-          margin-top: 5px;
-          background-color: transparent;
-          cursor: pointer;
-          width: 100%;
-        }
-        input[type="text"]::placeholder {
-          font-size: 14px;
-          line-height: 18px;
-          font-weight: 400;
-          color: #222;
-          opacity: 0.6;
-          white-space: normal;
-          letter-spacing: 0.3px;
-        }
-      }
-      .input1 {
-        flex: 1;
-        @include mq("desktop") {
-          flex: 2;
-        }
-      }
-      .input4 {
-        display: flex;
-        flex-direction: row;
+        display: none;
         align-items: center;
-        flex: 1.5;
-        .item {
+        justify-content: flex-start;
+        margin: 0 auto;
+
+        @include mq("tablet") {
+          display: flex;
+        }
+        .seperator {
+          width: 1px;
+          height: 30px;
+          background-color: #dddddd;
+        }
+
+        .form_item {
           display: flex;
           flex-direction: column;
-        }
-        .form_button {
-          flex: unset;
-          display: flex;
-          align-items: center;
+          align-items: flex-start;
+          flex: 1;
+          font-size: 13px;
+          line-height: 16px;
+          font-weight: 700;
+          letter-spacing: 0.3px;
+          height: 66px;
+          border-radius: 50px;
+          padding-left: 30px;
           justify-content: center;
-          background-color: #ff385c;
-          color: #fff;
-          min-width: 48px;
-          height: 48px;
-          padding-left: 0px;
-          margin-right: 10px;
+          cursor: pointer;
           &:hover {
-            background-color: #ff385c;
+            background-color: rgba(#f1f1f1, 0.7);
           }
-          svg {
-            margin-left: 3px;
-            width: 16px;
-            height: 16px;
+          input[type="text"] {
+            margin-top: 5px;
+            background-color: transparent;
+            cursor: pointer;
+            width: 100%;
+          }
+          input[type="text"]::placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #222;
+            opacity: 0.6;
+            white-space: normal;
+            letter-spacing: 0.3px;
+          }
+        }
+        .input1 {
+          flex: 1;
+          @include mq("desktop") {
+            flex: 2;
+          }
+        }
+        .input4 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex: 1.5;
+          .item {
+            display: flex;
+            flex-direction: column;
+          }
+          .form_button {
+            flex: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff385c;
+            color: #fff;
+            min-width: 48px;
+            height: 48px;
+            padding-left: 0px;
+            margin-right: 10px;
+            &:hover {
+              background-color: #ff385c;
+            }
+            svg {
+              margin-left: 3px;
+              width: 16px;
+              height: 16px;
+            }
           }
         }
       }
@@ -543,8 +593,10 @@ body {
       height: 64px;
       border-top: 1px solid #dddddd;
       background-color: #fff;
-      display: none;
-
+      z-index: 99;
+      @include mq("tablet") {
+        display: none;
+      }
       .menu_items {
         display: flex;
         justify-content: center;
@@ -608,6 +660,10 @@ body {
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       // scroll-padding: 1rem;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
       @include mq("tablet") {
         max-width: unset;
         overflow: unset;
@@ -672,6 +728,10 @@ body {
       overflow: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
       @include mq("tablet") {
         max-width: unset;
         overflow: unset;
@@ -853,6 +913,10 @@ body {
           scroll-snap-type: x mandatory;
           -webkit-overflow-scrolling: touch;
           display: flex;
+          &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+          }
           li {
             margin-right: 0px;
             scroll-snap-align: start;
@@ -991,10 +1055,12 @@ body {
       border-top: 1px solid #dddddd;
       display: flex;
       flex-direction: column-reverse;
+      margin-bottom: 64px;
       @include mq("tablet") {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 0px;
       }
       @include mq("large") {
         flex-direction: row;

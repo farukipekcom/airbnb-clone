@@ -1,10 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -79,38 +74,54 @@ body {
       justify-content: space-around;
 }
 
-.sticky_menu .container .logo {
+.sticky_menu .container .logo2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: none;
 }
 
-.sticky_menu .container .logo a svg {
+@media (min-width: 744px) {
+  .sticky_menu .container .logo2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.sticky_menu .container .logo2 a svg {
   color: #ff385c;
 }
 
-.sticky_menu .container .input {
+.sticky_menu .container .input2 {
   position: relative;
+  width: 100%;
 }
 
-.sticky_menu .container .input input[type="text"]::-webkit-input-placeholder {
+@media (min-width: 744px) {
+  .sticky_menu .container .input2 {
+    width: unset;
+  }
+}
+
+.sticky_menu .container .input2 input[type="text"]::-webkit-input-placeholder {
   color: #333;
 }
 
-.sticky_menu .container .input input[type="text"]:-ms-input-placeholder {
+.sticky_menu .container .input2 input[type="text"]:-ms-input-placeholder {
   color: #333;
 }
 
-.sticky_menu .container .input input[type="text"]::-ms-input-placeholder {
+.sticky_menu .container .input2 input[type="text"]::-ms-input-placeholder {
   color: #333;
 }
 
-.sticky_menu .container .input input[type="text"]::placeholder {
+.sticky_menu .container .input2 input[type="text"]::placeholder {
   color: #333;
 }
 
-.sticky_menu .container .input input[type="text"] {
-  width: 300px;
+.sticky_menu .container .input2 input[type="text"] {
+  width: 100%;
   height: 48px;
   border: 1px solid #dddddd;
   border-radius: 40px;
@@ -121,7 +132,13 @@ body {
   font-size: 14px;
 }
 
-.sticky_menu .container .input svg {
+@media (min-width: 744px) {
+  .sticky_menu .container .input2 input[type="text"] {
+    width: 300px;
+  }
+}
+
+.sticky_menu .container .input2 svg {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -133,26 +150,32 @@ body {
   border-radius: 50px;
 }
 
-.sticky_menu .container .input svg path {
+.sticky_menu .container .input2 svg path {
   stroke: #fff;
 }
 
-.sticky_menu .container .profile {
+.sticky_menu .container .profile2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  display: none;
 }
 
-.sticky_menu .container .profile a {
+@media (min-width: 744px) {
+  .sticky_menu .container .profile2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.sticky_menu .container .profile2 a {
   padding: 12px;
   border-radius: 30px;
   color: #000;
@@ -167,41 +190,41 @@ body {
           justify-content: center;
 }
 
-.sticky_menu .container .profile a .svg_country {
+.sticky_menu .container .profile2 a .svg_country {
   width: 18px;
   height: 16px;
 }
 
-.sticky_menu .container .profile a .svg_country path {
+.sticky_menu .container .profile2 a .svg_country path {
   fill: #000;
 }
 
-.sticky_menu .container .profile a:hover {
+.sticky_menu .container .profile2 a:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.sticky_menu .container .profile .active_profile {
+.sticky_menu .container .profile2 .active_profile {
   background-color: #fff;
   padding: 3px 6px 3px 9px;
   margin-left: 10px;
   border: 1px solid #dddddd;
 }
 
-.sticky_menu .container .profile .active_profile .svg_threeline {
+.sticky_menu .container .profile2 .active_profile .svg_threeline {
   height: 11px;
 }
 
-.sticky_menu .container .profile .active_profile .svg_profile {
+.sticky_menu .container .profile2 .active_profile .svg_profile {
   margin-left: 10px;
   height: 30px;
   width: 30px;
 }
 
-.sticky_menu .container .profile .active_profile .svg_profile path {
+.sticky_menu .container .profile2 .active_profile .svg_profile path {
   fill: gray;
 }
 
-.sticky_menu .container .profile .active_profile:hover {
+.sticky_menu .container .profile2 .active_profile:hover {
   background-color: #fff;
 }
 
@@ -556,6 +579,71 @@ body {
   margin-left: 0px;
 }
 
+.main .container .menu2 {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  margin-top: -16px;
+}
+
+@media (min-width: 744px) {
+  .main .container .menu2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 950px) {
+  .main .container .menu2 {
+    display: none;
+  }
+}
+
+.main .container .menu2 li {
+  line-height: 1.4;
+  margin-left: 30px;
+}
+
+.main .container .menu2 li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main .container .menu2 li a:hover {
+  opacity: 0.8;
+}
+
+.main .container .menu2 li a .active {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -12px;
+  opacity: 1;
+}
+
+.main .container .menu2 li:first {
+  margin-left: 0px;
+}
+
 .main .container .mobile_form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,7 +693,11 @@ body {
   height: 48px;
 }
 
-.main .container .form {
+.main .container .formm {
+  width: 850px;
+}
+
+.main .container .formm .form {
   width: 100%;
   max-width: 850px;
   height: 66px;
@@ -622,20 +714,20 @@ body {
 }
 
 @media (min-width: 744px) {
-  .main .container .form {
+  .main .container .formm .form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.main .container .form .seperator {
+.main .container .formm .form .seperator {
   width: 1px;
   height: 30px;
   background-color: #dddddd;
 }
 
-.main .container .form .form_item {
+.main .container .formm .form .form_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,18 +754,18 @@ body {
   cursor: pointer;
 }
 
-.main .container .form .form_item:hover {
+.main .container .formm .form .form_item:hover {
   background-color: rgba(241, 241, 241, 0.7);
 }
 
-.main .container .form .form_item input[type="text"] {
+.main .container .formm .form .form_item input[type="text"] {
   margin-top: 5px;
   background-color: transparent;
   cursor: pointer;
   width: 100%;
 }
 
-.main .container .form .form_item input[type="text"]::-webkit-input-placeholder {
+.main .container .formm .form .form_item input[type="text"]::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -683,7 +775,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-.main .container .form .form_item input[type="text"]:-ms-input-placeholder {
+.main .container .formm .form .form_item input[type="text"]:-ms-input-placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -693,7 +785,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-.main .container .form .form_item input[type="text"]::-ms-input-placeholder {
+.main .container .formm .form .form_item input[type="text"]::-ms-input-placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -703,7 +795,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-.main .container .form .form_item input[type="text"]::placeholder {
+.main .container .formm .form .form_item input[type="text"]::placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -713,21 +805,21 @@ body {
   letter-spacing: 0.3px;
 }
 
-.main .container .form .input1 {
+.main .container .formm .form .input1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 @media (min-width: 950px) {
-  .main .container .form .input1 {
+  .main .container .formm .form .input1 {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
   }
 }
 
-.main .container .form .input4 {
+.main .container .formm .form .input4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,7 +835,7 @@ body {
           flex: 1.5;
 }
 
-.main .container .form .input4 .item {
+.main .container .formm .form .input4 .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,7 +845,7 @@ body {
           flex-direction: column;
 }
 
-.main .container .form .input4 .form_button {
+.main .container .formm .form .input4 .form_button {
   -webkit-box-flex: unset;
       -ms-flex: unset;
           flex: unset;
@@ -774,11 +866,11 @@ body {
   margin-right: 10px;
 }
 
-.main .container .form .input4 .form_button:hover {
+.main .container .formm .form .input4 .form_button:hover {
   background-color: #ff385c;
 }
 
-.main .container .form .input4 .form_button svg {
+.main .container .formm .form .input4 .form_button svg {
   margin-left: 3px;
   width: 16px;
   height: 16px;
@@ -890,7 +982,13 @@ body {
   height: 64px;
   border-top: 1px solid #dddddd;
   background-color: #fff;
-  display: none;
+  z-index: 99;
+}
+
+@media (min-width: 744px) {
+  .main .container .bottom_menu {
+    display: none;
+  }
 }
 
 .main .container .bottom_menu .menu_items {
@@ -981,6 +1079,11 @@ body {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+}
+
+.explore_nearby .container .cities::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 @media (min-width: 744px) {
@@ -1078,6 +1181,11 @@ body {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+}
+
+.live_things .container .stays::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 @media (min-width: 744px) {
@@ -1366,6 +1474,11 @@ body {
   display: flex;
 }
 
+.future_getaways .container .scope nav ul::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .future_getaways .container .scope nav ul li {
   margin-right: 0px;
   scroll-snap-align: start;
@@ -1578,6 +1691,7 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin-bottom: 64px;
 }
 
 @media (min-width: 744px) {
@@ -1592,6 +1706,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 0px;
   }
 }
 
