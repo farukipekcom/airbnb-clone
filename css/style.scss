@@ -1791,3 +1791,287 @@ body {
     }
   }
 }
+
+.menu_other_flexible {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.flexible_filter {
+  height: 72px;
+  margin-top: 88px;
+  margin-bottom: 8px;
+  .container {
+    padding-top: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    .flexible_filter_left {
+      display: flex;
+      width: 100%;
+      .active {
+        padding: 10px 10px 10px 10px !important;
+        margin-left: -2px !important;
+        width: max-content;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          width: calc(100% - 16px);
+          background-color: #222;
+          height: 2px;
+        }
+        &:hover {
+          background-color: unset !important;
+        }
+        img {
+          display: block !important;
+        }
+        span {
+          color: #000 !important;
+          font-weight: 500 !important;
+        }
+      }
+      .flexible_filter_item {
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        margin: 0px 2px;
+        border-radius: 8px;
+
+        &:hover {
+          background-color: #f7f7f7;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        &:first-child {
+          padding: unset;
+          margin-left: 6px;
+        }
+        cursor: pointer;
+        img {
+          margin-right: 8px;
+          width: 20px;
+          height: 20px;
+          display: none;
+        }
+        span {
+          font-size: 15px;
+          color: #717171;
+          font-weight: 500;
+          letter-spacing: -0.4px;
+        }
+        svg {
+          color: #717171;
+          margin-left: 6px;
+        }
+      }
+    }
+    .flexible_filter_right {
+      display: flex;
+      margin-right: -8px;
+      .active {
+        border: 2px solid #222;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        padding: 9px 16px;
+        border: 1px solid #cacaca;
+        border-radius: 32px;
+        cursor: pointer;
+        & + div {
+          margin-left: 8px;
+        }
+        svg {
+          width: max-content;
+          margin-left: 10px;
+        }
+        .filters_padding {
+          margin-right: 8px;
+        }
+
+        span {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+.flexible {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+    @include mq("mobile") {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include mq("tablet") {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include mq("desktop") {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include mq("large") {
+      padding-left: 68px;
+      padding-right: 68px;
+    }
+    @media (min-width: 1600px) {
+      padding-left: 68px;
+      padding-right: 68px;
+    }
+    .flexible_cities {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .flexible_city {
+        margin: 12px;
+        width: calc(100% - 24px);
+        position: relative;
+        @include mq("mobile") {
+          width: calc(50% - 24px);
+        }
+        @include mq("tablet") {
+          width: calc(50% - 24px);
+        }
+        @include mq("desktop") {
+          width: calc(33.33% - 24px);
+        }
+        @include mq("large") {
+          width: calc(25% - 24px);
+        }
+        @media (min-width: 1600px) {
+          width: calc(20% - 24px);
+        }
+        .favourite {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+          z-index: 1;
+          cursor: pointer;
+        }
+        .carousel {
+          .carousel-cell {
+            img {
+              width: 100%;
+              aspect-ratio: 1;
+              object-fit: cover;
+              border-radius: 15px;
+              border: 1px solid rgba(rgb(165, 165, 165), 0.3);
+            }
+          }
+        }
+
+        .flexible_details {
+          width: 100%;
+          margin-top: 12px;
+          .flexible_first {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .flexible_heading {
+              font-size: 16px;
+              font-weight: 600;
+              color: #222;
+              height: 18px;
+              max-width: 50%;
+              white-space: nowrap;
+              @include mq("tablet") {
+                max-width: 50%;
+              }
+              @include mq("desktop") {
+                max-width: 60%;
+              }
+              @include mq("large") {
+                max-width: 50%;
+              }
+            }
+            .flexible_price {
+              font-size: 16px;
+              font-weight: 400;
+              width: 50%;
+              text-align: right;
+              background-color: #fff;
+              @include mq("tablet") {
+                width: 50%;
+              }
+              @include mq("desktop") {
+                width: 40%;
+              }
+              @include mq("large") {
+                width: 50%;
+              }
+            }
+          }
+          .flexible_second {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4px;
+            .flexible_distance {
+              color: #717171;
+              font-size: 16px;
+              height: 18px;
+              max-width: 65%;
+              white-space: nowrap;
+            }
+            .flexible_date {
+              color: #484848;
+              font-size: 14px;
+              width: 35%;
+              text-align: right;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//yedek
+// img {
+//   width: 100%;
+//   aspect-ratio: 1;
+//   object-fit: cover;
+//   border-radius: 15px;
+//   border: 1px solid rgba(rgb(165, 165, 165), 0.3);
+// }
+.carousel-cell {
+  width: 100%;
+  /* full width */
+  min-height: 100%;
+  /* height of carousel */
+  margin-right: 10px;
+}
+.flickity-page-dots {
+  bottom: 10px !important;
+}
+.dot {
+  background-color: #adadad !important;
+}
+.flickity-button {
+  width: 28px !important;
+  height: 28px !important;
+  background-color: #fff !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.flickity-button-icon {
+  width: 40% !important;
+  height: 40% !important;
+  left: 30% !important;
+  top: 30% !important;
+}
