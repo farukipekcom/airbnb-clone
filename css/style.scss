@@ -575,13 +575,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #c6017e;
-        font-weight: 800;
-        font-size: 19px;
         letter-spacing: -0.5px;
         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
         transition: 0.3s box-shadow;
         cursor: pointer;
+        color: #c6017e;
+        font-weight: 800;
+        font-size: 19px;
         @include mq("tablet") {
           width: 200px;
           height: 64px;
