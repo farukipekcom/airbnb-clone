@@ -129,6 +129,10 @@ body {
   display: none;
   transition: 2s display;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.09);
+  height: 0px;
+  @include mq("tablet") {
+    height: 80px;
+  }
   .container {
     height: 80px;
     color: #fff;
@@ -220,9 +224,9 @@ body {
         }
         .icon-user {
           margin-left: 5px;
-          font-size: 32px;
+          font-size: 28px;
           color: gray;
-          margin-right: -5px;
+          margin-left: 12px;
         }
         &:hover {
           background-color: #fff;
@@ -2885,7 +2889,14 @@ body {
       font-size: 22px;
       font-weight: 600;
       color: #222;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
+    }
+    .local_host_subheading {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #222;
+      padding-bottom: 32px;
     }
     .local_host_show {
       position: absolute;
@@ -2896,6 +2907,7 @@ body {
       text-decoration: underline;
     }
     .flexible_cities {
+      margin-top: 16px;
       .flexible_city {
         overflow: hidden;
         width: calc(50% - 24px);
@@ -3030,7 +3042,8 @@ body {
 }
 
 .best_sellers {
-  margin-top: 60px;
+  margin-top: 88px;
+  margin-bottom: 40px;
 }
 
 .carousel-cell {
@@ -3151,6 +3164,158 @@ body {
     @include mq("large") {
       padding-left: 80px;
       padding-right: 80px;
+    }
+  }
+}
+
+.wanderlust_menu {
+  background-color: transparent;
+  box-shadow: unset;
+
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+    .logo2 {
+      flex: 1;
+      display: none;
+      @include mq("tablet") {
+        display: flex;
+      }
+      a {
+        svg {
+          color: #fff;
+        }
+      }
+    }
+    .profile2 {
+      a {
+        color: #fff;
+        &:hover {
+          background-color: rgba(134, 134, 134, 0.393);
+        }
+        .icon-country {
+          color: #fff !important;
+        }
+      }
+      .active_profile {
+        background-color: #fff;
+        padding: 3px 6px 3px 9px;
+        margin-left: 10px;
+        max-height: 42px;
+        height: 70px;
+        border: 1px solid #dddddd;
+        .icon-menu {
+          font-size: 14px;
+          transform: scale(1.2, 1);
+          margin-left: 5px;
+          color: #222;
+        }
+        .icon-user {
+          margin-left: 5px;
+          font-size: 28px;
+          color: gray;
+          margin-left: 12px;
+        }
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+.wanderlust_mobile_menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: transparent !important;
+  display: flex;
+  height: 64px;
+  align-items: center;
+  @include mq("tablet") {
+    display: none;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    a {
+      padding: 12px;
+      border-radius: 50px;
+      background-color: white;
+      i {
+        font-size: 19px;
+        color: black;
+      }
+    }
+  }
+}
+.wanderlust {
+  background: url("../img/wanderlust-bg-mobile.jpeg");
+  background-repeat: no-repeat;
+  background-position: 50% 50% !important;
+  background-size: cover;
+  @include mq("tablet") {
+    background: url("../img/wanderlust-bg.webp");
+    background-repeat: no-repeat;
+    background-position: 50% 50% !important;
+    background-size: cover;
+  }
+  .container {
+    display: flex;
+    height: 670px;
+    @include mq("tablet") {
+      height: 740px;
+    }
+    .wanderlust_left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: #fff;
+      padding-top: 100px;
+      @include mq("tablet") {
+        flex-direction: column;
+        justify-content: center;
+        align-items: unset;
+        padding-top: 140px;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 30px;
+        @include mq("tablet") {
+          font-size: 44px;
+          line-height: 48px;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        width: 60%;
+        margin-top: 16px;
+        text-align: center;
+        @include mq("tablet") {
+          font-size: 18px;
+          line-height: 26px;
+          text-align: left;
+          width: 360px;
+        }
+      }
+    }
+  }
+}
+
+.wanderlust_list {
+  .container {
+    .local_host_show {
+      top: 28px;
+      right: 100px;
+      @include mq("tablet") {
+        right: 120px;
+      }
+      @include mq("desktop") {
+        right: 170px;
+      }
     }
   }
 }
