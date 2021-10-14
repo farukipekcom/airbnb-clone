@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Room</title>
+</head>
+
+<body>
+
+    <div class="menu_other room_menu">
+        <div class="container">
+            <div class="logo2">
+                <a href="index.html">
+                    <svg width="102" height="32" fill="currentcolor" style="display: block">
+                        <path
+                            d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="input2">
+                <input type="text" placeholder="Start your search" />
+                <i class="icon-search"></i>
+            </div>
+            <div class="profile2">
+                <a href="">Become a Host</a>
+                <a href="">
+                    <svg width="24" class="svg_country" height="24" viewBox="0 0 24 24" fill=""
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.003 0.375C15.0899 0.38374 18.0473 1.61677 20.2262 3.8035C22.405 5.99024 23.6274 8.95205 23.625 12.039C23.6146 15.0557 22.4319 17.9503 20.3268 20.1112C18.2217 22.272 15.359 23.5299 12.3435 23.619L11.9745 23.625C8.95717 23.6186 6.06053 22.4393 3.89679 20.3363C1.73305 18.2333 0.471765 15.3714 0.3795 12.3555L0.375 11.988C0.378181 8.90642 1.60477 5.95218 3.78518 3.77458C5.9656 1.59698 8.92142 0.374204 12.003 0.375ZM14.9265 13.125H9.072C9.3045 17.4705 10.836 21.1395 11.901 21.3645L12.003 21.375C13.023 21.372 14.583 17.8275 14.901 13.53L14.9265 13.125ZM21.309 13.125H17.181C17.0445 16.065 16.386 18.7995 15.399 20.739C16.9214 20.1459 18.2625 19.1657 19.2899 17.8953C20.3172 16.6248 20.9951 15.1083 21.2565 13.4955L21.309 13.125ZM6.8175 13.125H2.6925C2.89654 14.8086 3.55297 16.4055 4.59201 17.7459C5.63105 19.0864 7.01388 20.1202 8.5935 20.7375C7.671 18.9255 7.0395 16.425 6.8505 13.7085L6.8175 13.1235V13.125ZM8.5995 3.261L8.427 3.33C6.88769 3.96575 5.54527 4.99964 4.53752 6.32556C3.52976 7.65149 2.89297 9.22169 2.6925 10.875H6.8175C6.945 8.13 7.524 5.565 8.406 3.66L8.5995 3.261ZM11.9925 2.625C10.9395 2.628 9.3165 6.393 9.072 10.875H14.928C14.694 6.5205 13.161 2.8605 12.09 2.634L11.9925 2.6235V2.625ZM15.4125 3.273L15.447 3.348C16.4115 5.28 17.0505 7.974 17.1825 10.875H21.3045C21.0965 9.195 20.4393 7.60218 19.4022 6.26432C18.365 4.92645 16.9862 3.89306 15.411 3.273H15.4125Z"
+                            fill="" />
+                    </svg>
+                </a>
+                <a href="" class="active_profile">
+                    <svg width="22" class="svg_threeline" height="16" viewBox="0 0 22 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 8H21.5" stroke="black" stroke-width="2.25" />
+                        <path d="M0.5 14H21.5" stroke="black" stroke-width="2.25" />
+                        <path d="M0.5 2H21.5" stroke="black" stroke-width="2.25" />
+                    </svg>
+                    <svg width="24" class="svg_profile" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0.524902C5.67226 0.524902 0.525009 5.67215 0.525009 11.9999C0.525009 18.3277 5.67226 23.4749 12 23.4749C18.3278 23.4749 23.475 18.3277 23.475 11.9999C23.475 5.67215 18.3278 0.524902 12 0.524902ZM12 21.5249C8.98426 21.5249 6.29626 20.1119 4.55026 17.9174C5.76646 16.326 7.46303 15.1689 9.38851 14.6174C8.69521 14.177 8.12428 13.5687 7.72861 12.849C7.33294 12.1292 7.12533 11.3212 7.12501 10.4999C7.12501 7.8119 9.31201 5.6249 12 5.6249C14.688 5.6249 16.875 7.8119 16.875 10.4999C16.8743 11.3214 16.6665 12.1294 16.2707 12.8492C15.8749 13.5691 15.304 14.1775 14.6108 14.6182C16.5366 15.1692 18.2335 16.3265 19.4498 17.9182C17.7038 20.1119 15.0158 21.5249 12 21.5249Z"
+                            fill="" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="room">
+            <h1 class="room-heading">Beach House Belgrade</h1>
+            <div class="room-summary">
+                <div class="room-summary-left">
+                    <div class="room-summary-left-item">
+                        <i class="icon-star"></i>
+                        <span class="room-summary-left-item-point">4.97</span>
+                        <span class="room-summary-left-item-reviews">(32 reviews)</span>
+                    </div>
+                    <div class="room-summary-left-item">
+                        <i class="icon-star"></i>
+                        <span class="room-summary-left-item-ownerstatus">Superhost</span>
+                    </div>
+                    <div class="room-summary-left-item">
+                        <span class="room-summary-left-item-location">Belgrade, Serbia</span>
+                    </div>
+                </div>
+                <div class="room-summary-right">
+                    <div class="room-summary-right-item">
+                        <i class="icon-star"></i>
+                        <span class="room-summary-right-item-share">Share</span>
+                    </div>
+                    <div class="room-summary-right-item">
+                        <i class="icon-heart"></i>
+                        <span class="room-summary-right-item-save">Save</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="room-gallery">
+                <img src="img/room1.webp" class="one" alt="">
+                <img src="img/room2.webp" class="two" alt="">
+                <img src="img/room4.webp" class="three" alt="">
+                <img src="img/room3.webp" class="four" alt="">
+                <img src="img/room5.webp" class="five" alt="">
+                <div class="room-gallery-showall">
+                    <i class="icon-heart"></i>
+                    <span class="room-gallery-showall-text">Show all photos</span>
+                </div>
+            </div>
+            <div class="room-details">
+                <div class="room-details-left">
+                    <div class="room-details-summary">
+                        <div class="room-details-summary-left">
+                            <h2 class="room-details-summary-left-heading">Houseboat hosted by Vladimir</h2>
+                            <div class="room-details-summary-left-features">
+                                <span class="room-details-summary-left-features-item">4 guests</span>
+                                <span class="room-details-summary-left-features-item">1 bedroom</span>
+                                <span class="room-details-summary-left-features-item">2 beds</span>
+                                <span class="room-details-summary-left-features-item">1 bath</span>
+                            </div>
+                        </div>
+                        <div class="room-details-summary-right">
+                            <img src="img/room_host.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="room-details-plus">
+                        <div class="room-details-plus-item">
+                            <i class="icon-search"></i>
+                            <div class="room-details-plus-item-info">
+                                <span class="room-details-plus-item-info-heading">Entire</span>
+                                <span class="room-details-plus-item-info-desc">You’ll have the houseboat to yourself.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-details-plus-item">
+                            <i class="icon-search"></i>
+                            <div class="room-details-plus-item-info">
+                                <span class="room-details-plus-item-info-heading">Enhanced Clean
+                                </span>
+                                <span class="room-details-plus-item-info-desc">This Host committed to Airbnb's 5-step
+                                    enhanced cleaning process. <span class="text_link">Show more</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-details-plus-item">
+                            <i class="icon-search"></i>
+                            <div class="room-details-plus-item-info">
+                                <span class="room-details-plus-item-info-heading">Self check-in
+                                </span>
+                                <span class="room-details-plus-item-info-desc">Check yourself in with the lockbox.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-details-plus-item">
+                            <i class="icon-search"></i>
+                            <div class="room-details-plus-item-info">
+                                <span class="room-details-plus-item-info-heading">Free cancellation before Dec 5
+                                </span>
+                                <span class="room-details-plus-item-info-desc"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-details-description">
+                        Beach House Belgrade villa on the water is a modern designed, open space residence, tucked in
+                        the
+                        flourishing green oasis of Ada Ciganlija's park.
+                        <br /><br />
+                        Our property prevails in simplicity. It possess a large living area with big movable windows ,
+                        in
+                        front and on the sides, which provides the magical view on Sava river even when you are relaxing
+                        inside.
+                        <br /><br />
+                        <span class="room-details-description-showmore">Show more<i class="icon-arrow-right"></i></span>
+                    </div>
+                    <div class="room-details-sleep">
+                        <h3 class="room-details-sleep-heading">Where you'll sleep</h3>
+                        <img src="img/room4.webp" alt="">
+                        <div class="room-details-sleep-name">Bedroom</div>
+                        <div class="room-details-sleep-type">1 queen bed, 1 sofa bed</div>
+                    </div>
+                    <div class="room-details-offers">
+                        <h3 class="room-details-offers-heading">What this place offers</h3>
+                        <div class="room-details-offers-list">
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Beach access – Beachfront</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Kitchen</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Wifi</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Free parking on premises</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Pets allowed</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">TV</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Air conditioning</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name">Patio or balcony</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name item-none">Carbon monoxide alarm</span>
+                            </div>
+                            <div class="room-details-offers-list-item">
+                                <i class="icon-heart"></i>
+                                <span class="room-details-offers-list-item-name item-none">Smoke alarm</span>
+                            </div>
+                        </div>
+                        <div class="room-details-offers-button">
+                            Show all 31 amenities
+                        </div>
+                    </div>
+                    <div class="room-details-datetime">
+                        <h3 class="room-details-datetime-heading">7 nights in Belgrade</h3>
+                        <p class="room-details-datetime-daterange">Dec 6, 2021 - Dec 13, 2021</p>
+                    </div>
+                </div>
+                <div class="room-details-right">
+                    <div class="room-details-right-card">
+                        <div class="room-details-right-card-header">
+                            <div class="room-details-right-card-header-price"><span>549 ₺</span> / night</div>
+                            <div class="room-details-right-card-header-reviews">
+                                <i class="icon-star"></i>
+                                <span class="room-details-right-card-header-reviews-point">4.97</span>
+                                <span class="room-details-right-card-header-reviews-count">(32 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-reviews">
+                <div class="room-reviews-point">
+                    <i class="icon-star"></i>
+                    <span class="room-reviews-point-count">4.97 · 32 reviews</span>
+                </div>
+                <div class="room-reviews-summary">
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Cleanliness</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">4.9</span>
+                    </div>
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Accuracy</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">4.9</span>
+                    </div>
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Communication</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">5.0</span>
+                    </div>
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Location</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">5.0</span>
+                    </div>
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Check-in</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">5.0</span>
+                    </div>
+                    <div class="room-reviews-summary-item">
+                        <span class="room-reviews-summary-item-name">Value</span>
+                        <span class="room-reviews-summary-item-progress"></span>
+                        <span class="room-reviews-summary-item-avg">5.0</span>
+                    </div>
+                </div>
+                <div class="room-reviews-list">
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile1.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">Jelena</span>
+                                <span class="room-reviews-list-item-profile-info-date">April 2021</span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            First Airbnb spot that I find better then what I saw on the pictures!
+                            Hosted by lovely people
+                        </div>
+                    </div>
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile2.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">Selené</span>
+                                <span class="room-reviews-list-item-profile-info-date">April 2021</span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            Get ready to feel totally astonished as you watch the sunset and sunrise dance on the Sava
+                            River from the deck or bed. A gorgeous location and beautiful interior. We would
+                        </div>
+                    </div>
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile3.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">İlker Gazi</span>
+                                <span class="room-reviews-list-item-profile-info-date">September 2021
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            Very kind person and be interested his guest. thank you for everything.
+                        </div>
+                    </div>
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile4.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">Caroline</span>
+                                <span class="room-reviews-list-item-profile-info-date">September 2021
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            Vladimir's place is a gem. After staying for 2 nights in the city center, came here to spend
+                            our last night in Belgrade. This house is the perfect place to relax, chill and find peace.
+                        </div>
+                    </div>
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile5.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">Pjatacsuk</span>
+                                <span class="room-reviews-list-item-profile-info-date">perfect experience!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            perfect experience!
+                        </div>
+                    </div>
+                    <div class="room-reviews-list-item">
+                        <div class="room-reviews-list-item-profile">
+                            <img src="img/room_review_profile6.webp" alt="">
+                            <div class="room-reviews-list-item-profile-info">
+                                <span class="room-reviews-list-item-profile-info-name">Izaskun</span>
+                                <span class="room-reviews-list-item-profile-info-date">August 2021
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-reviews-list-item-comment">
+                            the place is stunning. it is unreal to see you are in Belgrade with such a paradise like
+                            that. An epic Sun set! Comunication with the host was great place is not easy to find if you
+                            arrive late in the afternoon but it is defintely a worthy try.
+                        </div>
+                    </div>
+                </div>
+                <div class="room-reviews-list-showall">Show all 32 reviews</div>
+            </div>
+            <div class="room-locationmap">
+                <h3 class="room-locationmap-heading">Where you’ll be</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21917.64793863223!2d20.395363420193107!3d44.792814280935794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrad%2C%20S%C4%B1rbistan!5e0!3m2!1str!2str!4v1634222387875!5m2!1str!2str"
+                    width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="room-locationmap-city">Belgrade, Serbia</div>
+                <div class="room-locationmap-desc">Golf court, basketball court, soccer court. Paintball arena. All of
+                    these are very close to the house.
+                </div>
+                <div class="room-locationmap-showmore">
+                    Show more<i class="icon-arrow-right"></i>
+                </div>
+            </div>
+            <div class="room-hosted">
+                <div class="room-hosted-owner">
+                    <img src="img/room_host.webp" alt="">
+                    <div class="room-hosted-owner-profile">
+                        <span class="room-hosted-owner-profile-name">Hosted by Vladimir</span>
+                        <span class="room-hosted-owner-profile-joineddate">Joined in March 2016</span>
+                    </div>
+                </div>
+                <div class="room-hosted-details">
+                    <div class="room-hosted-details-left">
+                        <div class="room-hosted-details-left-feature">
+                            <div class="room-hosted-details-left-feature-item">
+                                <i class="icon-star"></i>
+                                <span class="room-hosted-details-left-feature-item-name">80 Reviews</span>
+                            </div>
+                            <div class="room-hosted-details-left-feature-item">
+                                <i class="icon-star"></i>
+                                <span class="room-hosted-details-left-feature-item-name">Identity verified</span>
+                            </div>
+                            <div class="room-hosted-details-left-feature-item">
+                                <i class="icon-star"></i>
+                                <span class="room-hosted-details-left-feature-item-name">Superhost</span>
+                            </div>
+                        </div>
+                        <div class="room-hosted-details-left-cohost">
+                            <div class="room-hosted-details-left-cohost-heading">Co-hosts</div>
+                            <div class="room-hosted-details-left-cohost-profile">
+                                <img src="img/room_cohost.webp" alt="">
+                                <span class="room-hosted-details-left-cohost-profile-name">Dahiana</span>
+                            </div>
+                        </div>
+                        <div class="room-hosted-details-left-details">
+                            <span class="room-hosted-details-left-details-heading">During your stay</span>
+                            <span class="room-hosted-details-left-details-text">The guests can contact me or my wife
+                                anytime. Text or call.</span>
+                        </div>
+                        <div class="room-hosted-details-left-details">
+                            <span class="room-hosted-details-left-details-heading">Vladimir is a Superhost</span>
+                            <span class="room-hosted-details-left-details-text">Superhosts are experienced, highly
+                                rated hosts who are committed to providing great stays for guests.</span>
+                        </div>
+                    </div>
+                    <div class="room-hosted-details-right">
+                        <div class="room-hosted-details-right-hostinfo">
+                            <span class="room-hosted-details-right-hostinfo-item">Languages: English, Deutsch,
+                                Español</span>
+                            <span class="room-hosted-details-right-hostinfo-item">Response rate: 100%
+                            </span>
+                            <span class="room-hosted-details-right-hostinfo-item">Response time: within an hour
+                            </span>
+                        </div>
+                        <div class="room-hosted-details-right-contacthost">Contact Host</div>
+                        <div class="room-hosted-details-right-protectmoney">
+                            <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
+                                style="height: 24px; width: 24px; display: block; fill: rgb(255, 180, 0);">
+                                <path
+                                    d="m5 20.5a.5.5 0 0 1 -.5.5h-.5v.5a.5.5 0 0 1 -1 0v-.5h-.5a.5.5 0 0 1 0-1h .5v-.5a.5.5 0 0 1 1 0v .5h.5a.5.5 0 0 1 .5.5zm1.5 1.5a.5.5 0 1 0 .5.5.5.5 0 0 0 -.5-.5zm16-20h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm-2.58 4.87a13.41 13.41 0 0 1 -6.76-3.2.37.37 0 0 0 -.63.26l.08 16.22a.38.38 0 0 0 .55.32 11.98 11.98 0 0 0 7.07-13.31.37.37 0 0 0 -.31-.3z">
+                                </path>
+                                <path
+                                    d="m14.39 8.32a1.93 1.93 0 0 0 -3.66 0l-2.42 4.85a3.09 3.09 0 0 0 -.4 1.61 2.36 2.36 0 0 0 2.23 2.23 3.95 3.95 0 0 0 2.42-1.06 3.95 3.95 0 0 0 2.42 1.06 2.36 2.36 0 0 0 2.23-2.23 3.09 3.09 0 0 0 -.4-1.61zm-2.72 4.38c0-.05.01-1.23.89-1.23s.88 1.18.88 1.23a3.25 3.25 0 0 1 -.88 1.83 3.25 3.25 0 0 1 -.89-1.83zm3.31 3.31a2.92 2.92 0 0 1 -1.71-.77 4.3 4.3 0 0 0 1.17-2.54 2.02 2.02 0 0 0 -1.8-2.22l-.08-.01a2.02 2.02 0 0 0 -1.89 2.15l.01.08a4.29 4.29 0 0 0 1.17 2.54 2.92 2.92 0 0 1 -1.71.77 1.36 1.36 0 0 1 -1.23-1.23 2.13 2.13 0 0 1 .29-1.16l2.42-4.85c.33-.65.55-.76.94-.76s.61.11.94.76l2.42 4.85a2.13 2.13 0 0 1 .29 1.16 1.36 1.36 0 0 1 -1.23 1.23zm7.01-10.35a.5.5 0 0 0 -.43-.4 13.03 13.03 0 0 1 -8.68-4.57.52.52 0 0 0 -.77 0 13.03 13.03 0 0 1 -8.68 4.57.5.5 0 0 0 -.43.4c-1.58 8.19 1.55 14.02 9.3 17.31a.5.5 0 0 0 .39 0c7.75-3.29 10.87-9.11 9.3-17.31zm-9.49 16.3c-7.1-3.09-9.91-8.25-8.57-15.76a13.98 13.98 0 0 0 8.57-4.43 13.98 13.98 0 0 0 8.57 4.43c1.33 7.51-1.48 12.67-8.57 15.76z"
+                                    fill="#484848"></path>
+                            </svg>
+                            <span class="room-hosted-details-right-protectmoney-text">To protect your payment, never
+                                transfer money or communicate outside of the Airbnb
+                                website or app. </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-thingtoknow">
+                <h3 class="room-thingtoknow-heading">Things to know</h3>
+                <div class="room-thingtoknow-boxes">
+                    <div class="room-thingtoknow-boxes-box">
+                        <div class="room-thingtoknow-boxes-box-heading">House rules</div>
+                        <div class="room-thingtoknow-boxes-box-list">
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Check-in: After 1:00 PM</span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Checkout: 10:00 AM</span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Self check-in with
+                                    lockbox</span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Pets are allowed</span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Smoking is allowed
+                                </span>
+                            </div>
+                        </div>
+                        <div class="room-thingtoknow-boxes-box-showmore">
+                            Show more<i class="icon-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="room-thingtoknow-boxes-box">
+                        <div class="room-thingtoknow-boxes-box-heading">Health & safety</div>
+                        <div class="room-thingtoknow-boxes-box-list">
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Committed to Airbnb's enhanced
+                                    cleaning process. <span class="text-link">Show more</span></span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Airbnb's social-distancing and
+                                    other
+                                    COVID-19-related guidelines apply</span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Carbon monoxide alarm not
+                                    reported
+                                    <span class="text-link">Show more</span>
+                                </span>
+                            </div>
+                            <div class="room-thingtoknow-boxes-box-list-item">
+                                <i class="icon-star"></i>
+                                <span class="room-thingtoknow-boxes-box-list-item-text">Smoke alarm not reported <span
+                                        class="text-link">Show more</span></span>
+                            </div>
+                        </div>
+
+                        <div class="room-thingtoknow-boxes-box-showmore">
+                            Show more<i class="icon-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="room-thingtoknow-boxes-box">
+                        <div class="room-thingtoknow-boxes-box-heading">Cancellation policy</div>
+                        <span class="room-thingtoknow-boxes-box-text">Free cancellation before Dec 14</span>
+
+                        <div class="room-thingtoknow-boxes-box-showmore">
+                            Show more<i class="icon-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore">
+        <div class="seperator"></div>
+        <div class="room-explore">
+            <h3 class="room-explore-heading">Explore other options in and around Belgrade</h3>
+            <span class="room-explore-desc">More places to stay in Belgrade:</span>
+            <div class="room-explore-types">
+                <span class="room-explore-types-item">Apartments</span>
+                <span class="room-explore-types-item">Houses</span>
+                <span class="room-explore-types-item">Bed and breakfast</span>
+                <span class="room-explore-types-item">Lofts</span>
+                <span class="room-explore-types-item">Villas</span>
+            </div>
+            <div class="room-explore-cities">
+                <div class="room-explore-cities-city">Novi Sad</div>
+                <div class="room-explore-cities-city">Sarajevo</div>
+                <div class="room-explore-cities-city">Dubrovnik</div>
+                <div class="room-explore-cities-city">Budva</div>
+                <div class="room-explore-cities-city">Budapest</div>
+                <div class="room-explore-cities-city">Cluj-Napoca</div>
+                <div class="room-explore-cities-city">Sofia</div>
+                <div class="room-explore-cities-city">Split</div>
+                <div class="room-explore-cities-city">Hvar</div>
+                <div class="room-explore-cities-city">Zagreb</div>
+                <div class="room-explore-cities-city">Tirana</div>
+                <div class="room-explore-cities-city">Zadar</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer_top">
+                <div class="column">
+                    <div class="footer_heading">ABOUT</div>
+                    <ul>
+                        <li><a href="#">How Airbnb works</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Airbnb 2021</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Airbnb Plus</a></li>
+                        <li><a href="#">Airbnb Luxe</a></li>
+                        <li><a href="#">HotelTonight</a></li>
+                        <li><a href="#">Airbnb for Work</a></li>
+                        <li><a href="#">Made possible by Hosts</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Founders' Letter</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="footer_heading">COMMUNITY</div>
+                    <ul>
+                        <li><a href="#">Diversity & Belonging</a></li>
+                        <li><a href="#">Against Discrimination</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Airbnb Associates</a></li>
+                        <li><a href="#">Host Afghan refugees</a></li>
+                        <li><a href="#">Guest Referrals</a></li>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Airbnb.org</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="footer_heading">HOST</div>
+                    <ul>
+                        <li><a href="#">Host your home</a></li>
+                        <li><a href="#">Host an Online Experience</a></li>
+                        <li><a href="#">Host an Experience</a></li>
+                        <li><a href="#">Responsible hosting</a></li>
+                        <li><a href="#">Resource Center</a></li>
+                        <li><a href="#">Community Center</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="footer_heading">SUPPORT</div>
+                    <ul>
+                        <li><a href="#">Our COVID-19 Response</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Cancellation options</a></li>
+                        <li><a href="#">Neighborhood Support</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="left">
+                    <span>© 2021 Airbnb, Inc.</span>
+                    <ul>
+                        <li>Privacy</li>
+                        <li>Terms</li>
+                        <li>Sitemap</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="icons">
+                        <div class="icon">
+                            <i class="icon-country"></i>
+                            <span>English (US)</span>
+                        </div>
+                        <div class="icon">
+                            ₺
+                            <span>TRY</span>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <i class="icon-facebook"></i>
+                        <i class="icon-twitter"></i>
+                        <i class="icon-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
