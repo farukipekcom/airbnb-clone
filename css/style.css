@@ -4630,10 +4630,6 @@ body {
   margin-bottom: 40px;
 }
 
-.next_6_hours {
-  margin-top: 80px;
-}
-
 .next_6_hours .container .next_6_hours_heading {
   margin-bottom: 16px;
   font-size: 22px;
@@ -5011,15 +5007,11 @@ body {
   margin: 0 auto;
 }
 
-.container {
-  margin-top: 80px;
-}
-
 .container .room {
   width: 1120px;
   padding-left: 0px;
   padding-right: 0px;
-  margin: 0 auto;
+  margin: 80px auto;
   position: relative;
 }
 
@@ -5300,7 +5292,6 @@ body {
 }
 
 .container .room-details-right-card {
-  height: 200px;
   -webkit-box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
   border: 1px solid #ddd;
@@ -5351,6 +5342,240 @@ body {
 .container .room-details-right-card-header-reviews-count {
   color: #717171;
   margin-left: 2px;
+}
+
+.container .room-details-right-card-form {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #222;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.container .room-details-right-card-form-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 12px;
+  border-right: 1px solid #222;
+}
+
+.container .room-details-right-card-form-left-heading {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.container .room-details-right-card-form-left-date {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.container .room-details-right-card-form-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 12px;
+}
+
+.container .room-details-right-card-form-right-heading {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.container .room-details-right-card-form-right-date {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.container .room-details-right-card-formbottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #222;
+  border-top: none;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px;
+  position: relative;
+}
+
+.container .room-details-right-card-formbottom-heading {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.container .room-details-right-card-formbottom-guest {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.container .room-details-right-card-formbottom i {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 24px;
+}
+
+.container .room-details-right-card-button {
+  height: 48px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#e61e4d), color-stop(50%, #e31c5f), to(#d70466)) !important;
+  background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%) !important;
+}
+
+.container .room-details-right-card-info {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: #222;
+  font-size: 14px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .room-details-right-card-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.container .room-details-right-card-summary:first-child {
+  margin-top: 0px;
+}
+
+.container .room-details-right-card-summary-left {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222;
+  text-decoration: underline;
+}
+
+.container .room-details-right-card-summary-right {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222;
+}
+
+.container .room-details-right-card-summary .discount {
+  color: green;
+}
+
+.container .room-details-right-card-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+}
+
+.container .room-details-right-card-total-left {
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.container .room-details-right-card-total-right {
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.container .room-details-right-lowerprice {
+  margin-top: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .room-details-right-lowerprice-text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222;
+}
+
+.container .room-details-right-lowerprice-text .text-bold {
+  font-weight: 600;
+}
+
+.container .room-details-right-lowerprice i {
+  margin-left: 24px;
+  font-size: 36px;
+}
+
+.container .room-details-right-report {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .room-details-right-report i {
+  margin-right: 12px;
+  color: #717171;
+}
+
+.container .room-details-right-report-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #717171;
 }
 
 .container .room-details-plus {

@@ -3084,7 +3084,7 @@ body {
 }
 
 .next_6_hours {
-  margin-top: 80px;
+  // margin-top: 80px;
   .container {
     .next_6_hours_heading {
       margin-bottom: 16px;
@@ -3369,12 +3369,11 @@ body {
   }
 }
 .container {
-  margin-top: 80px;
   .room {
     width: 1120px;
     padding-left: 0px;
     padding-right: 0px;
-    margin: 0 auto;
+    margin: 80px auto;
     position: relative;
     &-heading {
       padding-top: 24px;
@@ -3575,7 +3574,6 @@ body {
         top: 120px;
         margin-bottom: 48px;
         &-card {
-          height: 200px;
           box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
           border: 1px solid #ddd;
           border-radius: 12px;
@@ -3611,6 +3609,169 @@ body {
                 margin-left: 2px;
               }
             }
+          }
+          &-form {
+            margin-top: 24px;
+            display: flex;
+            border: 1px solid #222;
+            border-radius: 8px 8px 0px 0px;
+            &-left {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              padding: 12px;
+              border-right: 1px solid #222;
+              &-heading {
+                font-size: 10px;
+                font-weight: 800;
+              }
+              &-date {
+                font-size: 13px;
+                margin-top: 4px;
+              }
+            }
+            &-right {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              padding: 12px;
+              &-heading {
+                font-size: 10px;
+                font-weight: 800;
+              }
+              &-date {
+                font-size: 13px;
+                margin-top: 4px;
+              }
+            }
+          }
+          &-formbottom {
+            display: flex;
+            border: 1px solid #222;
+            border-top: none;
+            border-radius: 0px 0px 8px 8px;
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            position: relative;
+            &-heading {
+              font-size: 10px;
+              font-weight: 800;
+            }
+            &-guest {
+              font-size: 14px;
+              margin-top: 4px;
+            }
+            i {
+              position: absolute;
+              right: 14px;
+              top: 14px;
+              font-size: 24px;
+            }
+          }
+          &-button {
+            height: 48px;
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+              to right,
+              #e61e4d 0%,
+              #e31c5f 50%,
+              #d70466 100%
+            ) !important;
+          }
+          &-info {
+            margin-top: 16px;
+            margin-bottom: 24px;
+            color: #222;
+            font-size: 14px;
+            line-height: 18px;
+            display: flex;
+            justify-content: center;
+          }
+          &-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            margin-bottom: 16px;
+            &:first-child {
+              margin-top: 0px;
+            }
+            &-left {
+              font-size: 16px;
+              line-height: 20px;
+              color: #222;
+              text-decoration: underline;
+            }
+            &-right {
+              font-size: 16px;
+              line-height: 20px;
+              color: #222;
+            }
+            .discount {
+              color: green;
+            }
+          }
+          &-total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #ddd;
+            padding-top: 16px;
+            &-left {
+              font-size: 16px;
+              color: #222;
+              font-weight: 600;
+              letter-spacing: 0.4px;
+            }
+            &-right {
+              font-size: 16px;
+              color: #222;
+              font-weight: 600;
+              letter-spacing: 0.4px;
+            }
+          }
+        }
+        &-lowerprice {
+          margin-top: 24px;
+          border: 1px solid #ddd;
+          border-radius: 12px;
+          padding: 25px;
+          display: flex;
+          align-items: center;
+          &-text {
+            font-size: 16px;
+            line-height: 20px;
+            color: #222;
+            .text-bold {
+              font-weight: 600;
+            }
+          }
+          i {
+            margin-left: 24px;
+            font-size: 36px;
+          }
+        }
+        &-report {
+          margin-top: 24px;
+          display: flex;
+          justify-content: center;
+          i {
+            margin-right: 12px;
+            color: #717171;
+          }
+          &-text {
+            font-size: 14px;
+            line-height: 20px;
+            color: #717171;
           }
         }
       }
