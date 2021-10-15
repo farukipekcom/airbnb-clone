@@ -1581,7 +1581,9 @@ body {
       .stays_list {
         padding-left: 24px;
         padding-right: 24px;
-
+        a {
+          color: #222;
+        }
         .stays_item {
           border: none;
           padding-top: 0px;
@@ -2272,7 +2274,8 @@ body {
       display: flex;
       flex-wrap: wrap;
 
-      .flexible_city {
+      a {
+        color: #222;
         margin: 12px;
         width: calc(100% - 24px);
         position: relative;
@@ -2291,86 +2294,88 @@ body {
         @media (min-width: 1600px) {
           width: calc(20% - 24px);
         }
-        .favourite {
-          position: absolute;
-          right: 16px;
-          top: 16px;
-          z-index: 1;
-          cursor: pointer;
-        }
-        .carousel {
-          .carousel-cell {
-            img {
-              width: 100%;
-              aspect-ratio: 1;
-              object-fit: cover;
-              border-radius: 15px;
-              border: 1px solid rgba(rgb(165, 165, 165), 0.3);
+        .flexible_city {
+          .favourite {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            z-index: 1;
+            cursor: pointer;
+          }
+          .carousel {
+            .carousel-cell {
+              img {
+                width: 100%;
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: 15px;
+                border: 1px solid rgba(rgb(165, 165, 165), 0.3);
+              }
             }
           }
-        }
 
-        .flexible_details {
-          width: 100%;
-          margin-top: 12px;
-          .flexible_first {
-            display: flex;
+          .flexible_details {
             width: 100%;
-            align-items: center;
-            justify-content: space-between;
-            .flexible_heading {
-              font-size: 16px;
-              font-weight: 600;
-              color: #222;
-              height: 18px;
-              max-width: 50%;
-              white-space: nowrap;
-              @include mq("tablet") {
+            margin-top: 12px;
+            .flexible_first {
+              display: flex;
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              .flexible_heading {
+                font-size: 16px;
+                font-weight: 600;
+                color: #222;
+                height: 18px;
                 max-width: 50%;
+                white-space: nowrap;
+                @include mq("tablet") {
+                  max-width: 50%;
+                }
+                @include mq("desktop") {
+                  max-width: 60%;
+                }
+                @include mq("large") {
+                  max-width: 50%;
+                }
               }
-              @include mq("desktop") {
-                max-width: 60%;
-              }
-              @include mq("large") {
-                max-width: 50%;
-              }
-            }
-            .flexible_price {
-              font-size: 16px;
-              font-weight: 400;
-              width: 50%;
-              text-align: right;
-              background-color: #fff;
-              @include mq("tablet") {
+              .flexible_price {
+                font-size: 16px;
+                font-weight: 400;
                 width: 50%;
-              }
-              @include mq("desktop") {
-                width: 40%;
-              }
-              @include mq("large") {
-                width: 50%;
+                text-align: right;
+                background-color: #fff;
+                @include mq("tablet") {
+                  width: 50%;
+                }
+                @include mq("desktop") {
+                  width: 40%;
+                }
+                @include mq("large") {
+                  width: 50%;
+                }
               }
             }
-          }
-          .flexible_second {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 4px;
-            .flexible_distance {
-              color: #717171;
-              font-size: 16px;
-              height: 18px;
-              max-width: 65%;
-              white-space: nowrap;
-            }
-            .flexible_date {
-              color: #484848;
-              font-size: 14px;
-              width: 35%;
-              text-align: right;
-              background-color: #fff;
+            .flexible_second {
+              display: flex;
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 4px;
+              .flexible_distance {
+                color: #717171;
+                font-size: 16px;
+                height: 18px;
+                max-width: 65%;
+                white-space: nowrap;
+              }
+              .flexible_date {
+                color: #484848;
+                font-size: 14px;
+                width: 35%;
+                text-align: right;
+                background-color: #fff;
+              }
             }
           }
         }
@@ -2454,7 +2459,7 @@ body {
     }
     .flexible_cities {
       margin-top: 8px;
-      .flexible_city {
+      a {
         overflow: hidden;
         width: calc(50% - 24px);
         @include mq("mobile") {
@@ -2472,47 +2477,49 @@ body {
         @media (min-width: 1600px) {
           width: calc(20% - 24px);
         }
-        img {
-          aspect-ratio: 3/4;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 15px;
-          border: 1px solid rgba(rgb(165, 165, 165), 0.3);
-        }
-        .experience_details {
-          display: flex;
-          flex-direction: column;
-          .experience_first {
-            margin-top: 10px;
+        .flexible_city {
+          img {
+            aspect-ratio: 3/4;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 1px solid rgba(rgb(165, 165, 165), 0.3);
+          }
+          .experience_details {
             display: flex;
-            align-items: center;
-            svg {
-              color: #ff385c;
+            flex-direction: column;
+            .experience_first {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+              svg {
+                color: #ff385c;
+              }
+              .star_point {
+                color: #222;
+                font-size: 14px;
+                font-weight: 400;
+              }
+              .star_count {
+                color: #717171;
+                font-size: 14px;
+              }
             }
-            .star_point {
-              color: #222;
-              font-size: 14px;
-              font-weight: 400;
-            }
-            .star_count {
-              color: #717171;
-              font-size: 14px;
-            }
-          }
-          .experience_second {
-            margin-top: 8px;
-            .experience_heading {
-              font-size: 16px;
-              font-weight: 300;
-              color: #222;
-            }
-          }
-          .experience_third {
-            margin-top: 8px;
-            .experience_price {
-              span {
-                font-weight: 600;
+            .experience_second {
+              margin-top: 8px;
+              .experience_heading {
                 font-size: 16px;
+                font-weight: 300;
+                color: #222;
+              }
+            }
+            .experience_third {
+              margin-top: 8px;
+              .experience_price {
+                span {
+                  font-weight: 600;
+                  font-size: 16px;
+                }
               }
             }
           }
@@ -3073,6 +3080,11 @@ body {
   top: -32px !important;
 }
 
+.tesst {
+  width: 100% !important;
+  border-radius: unset !important;
+  counter-increment: unset !important;
+}
 .carousel-cell {
   display: flex;
   width: calc(45%);
@@ -3089,7 +3101,6 @@ body {
     width: calc(15.5%);
   }
   //tablet desktop icin width verebilirsin
-
   border-radius: 5px;
   counter-increment: gallery-cell;
   .city_slider_item {
@@ -3442,30 +3453,64 @@ body {
 .room_menu {
   .container {
     width: 1120px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin: 0 auto;
+    @include mq("desktop") {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include mq("large") {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
 }
 .container {
   .room {
-    width: 1120px;
     padding-left: 0px;
     padding-right: 0px;
-    margin: 80px auto;
+    margin: 0px auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include mq("tablet") {
+      margin: 80px auto;
+      width: 100%;
+    }
+    @include mq("desktop") {
+      margin: 80px auto;
+      width: 100%;
+    }
+    @include mq("large") {
+      margin: 80px auto;
+      width: 100%;
+    }
+    @media (min-width: 1300px) {
+      width: 1120px;
+    }
     &-heading {
       padding-top: 24px;
       font-size: 26px;
       line-height: 30px;
       color: #222;
       font-weight: 500;
+      order: 2;
+      @include mq("tablet") {
+        order: 1;
+      }
     }
     &-summary {
       display: flex;
       justify-content: space-between;
       margin-top: 10px;
       margin-bottom: 24px;
+
+      order: 3;
+      @include mq("tablet") {
+        order: 2;
+      }
       &-left {
         display: flex;
         &-item {
@@ -3511,8 +3556,11 @@ body {
         }
       }
       &-right {
-        display: flex;
         column-gap: 12px;
+        display: none;
+        @include mq("tablet") {
+          display: flex;
+        }
         &-item {
           display: flex;
           align-items: center;
@@ -3540,47 +3588,124 @@ body {
       }
     }
     &-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 8px 8px;
-      grid-template-areas:
-        "one one two three ."
-        "one one four five ."
-        ". . . . ."
-        ". . . . .";
+      @include mq("tablet") {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 8px 8px;
+        grid-template-areas:
+          "one one two three ."
+          "one one four five ."
+          ". . . . ."
+          ". . . . .";
+      }
       position: relative;
-      height: 500px;
+      height: 320px;
+      order: 1;
+      @include mq("tablet") {
+        height: 330px;
+        order: 3;
+      }
+      @include mq("desktop") {
+        order: 3;
+        height: 450px;
+      }
+      @include mq("large") {
+        order: 3;
+        height: 500px;
+      }
       img {
         object-fit: cover;
       }
       .one {
         grid-area: one;
-        width: 100%;
-        border-radius: 10px 0px 0px 10px;
-        height: 500px;
+        width: calc(100% + 48px);
+        height: 320px;
+        margin-left: -24px;
+        @include mq("tablet") {
+          height: 330px;
+          border-radius: 10px 0px 0px 10px;
+          margin-left: unset;
+          width: 100%;
+        }
+        @include mq("desktop") {
+          height: 450px;
+          border-radius: 10px 0px 0px 10px;
+          margin-left: unset;
+          width: 100%;
+        }
+        @include mq("large") {
+          height: 500px;
+          border-radius: 10px 0px 0px 10px;
+          margin-left: unset;
+          width: 100%;
+        }
       }
       .two {
         grid-area: two;
         width: 100%;
         height: 245px;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+          height: 160px;
+        }
+        @include mq("desktop") {
+          height: 220px;
+        }
+        @include mq("large") {
+          height: 245px;
+        }
       }
       .three {
         grid-area: three;
         width: 100%;
         border-radius: 0px 10px 0px 0px;
         height: 245px;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+          height: 160px;
+        }
+        @include mq("desktop") {
+          height: 220px;
+        }
+        @include mq("large") {
+          height: 245px;
+        }
       }
       .four {
         grid-area: four;
         width: 100%;
         height: 245px;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+          height: 160px;
+        }
+        @include mq("desktop") {
+          height: 220px;
+        }
+        @include mq("large") {
+          height: 245px;
+        }
       }
       .five {
         grid-area: five;
         width: 100%;
         border-radius: 0px 0px 10px 0px;
         height: 245px;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+          height: 160px;
+        }
+        @include mq("desktop") {
+          height: 220px;
+        }
+        @include mq("large") {
+          height: 245px;
+        }
       }
       &-showall {
         position: absolute;
@@ -3590,8 +3715,12 @@ body {
         border: 1px solid #222;
         border-radius: 8px;
         background-color: #fff;
-        display: flex;
         align-items: center;
+        display: none;
+        @include mq("tablet") {
+          display: flex;
+        }
+
         i {
           font-size: 14px;
         }
@@ -3605,12 +3734,24 @@ body {
       }
     }
     &-details {
-      margin-top: 48px;
       width: 100%;
       display: flex;
       position: relative;
+      order: 4;
+      margin-top: unset;
+      border-top: 1px solid #ddd;
+      padding-top: 24px;
+      @include mq("tablet") {
+        margin-top: 48px;
+        border-top: unset;
+        padding-top: unset;
+      }
+
       &-left {
-        width: 60%;
+        width: 100%;
+        @include mq("tablet") {
+          width: 60%;
+        }
       }
       &-summary {
         display: flex;
@@ -3620,9 +3761,23 @@ body {
         border-bottom: 1px solid #ddd;
         &-left {
           &-heading {
-            font-size: 22px;
-            font-weight: 600;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 500;
             color: #222;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            @include mq("tablet") {
+              flex-direction: row;
+              font-size: 22px;
+              line-height: unset;
+              font-weight: 600;
+              margin-bottom: unset;
+            }
+            span {
+              margin-top: 4px;
+            }
           }
           &-features {
             margin-top: 8px;
@@ -3656,6 +3811,10 @@ body {
         top: 120px;
         margin-bottom: 48px;
         height: 100%;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+        }
         &-card {
           box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
           border: 1px solid #ddd;
@@ -3663,8 +3822,12 @@ body {
           padding: 25px;
           &-header {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
+            @include mq("desktop") {
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+            }
             &-price {
               font-size: 16px;
               line-height: 20px;
@@ -3680,6 +3843,10 @@ body {
               font-size: 14px;
               line-height: 18px;
               font-weight: 500;
+              margin-top: 8px;
+              @include mq("desktop") {
+                margin-top: unset;
+              }
               i {
                 color: #ff385c;
               }
@@ -3798,6 +3965,7 @@ body {
               font-size: 16px;
               line-height: 20px;
               color: #222;
+              min-width: max-content;
             }
             .discount {
               color: green;
@@ -3858,11 +4026,13 @@ body {
           }
         }
       }
-
       &-plus {
         margin-top: 32px;
-        padding-bottom: 24px;
+        padding-bottom: 0px;
         border-bottom: 1px solid #ddd;
+        @include mq("tablet") {
+          padding-bottom: 24px;
+        }
         &-item {
           display: flex;
           align-items: flex-start;
@@ -3905,9 +4075,12 @@ body {
         }
       }
       &-sleep {
-        margin-top: 48px;
         padding-bottom: 48px;
         border-bottom: 1px solid #ddd;
+        margin-top: 32px;
+        @include mq("tablet") {
+          margin-top: 48px;
+        }
         &-heading {
           font-size: 22px;
           color: #222;
@@ -3934,8 +4107,11 @@ body {
       }
       &-offers {
         margin-top: 48px;
-        padding-bottom: 48px;
+        padding-bottom: 24px;
         border-bottom: 1px solid #ddd;
+        @include mq("tablet") {
+          padding-bottom: 48px;
+        }
         &-heading {
           font-size: 22px;
           color: #222;
@@ -3943,13 +4119,19 @@ body {
         }
         &-list {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: wrap;
+          @include mq("tablet") {
+            flex-direction: row;
+          }
           &-item {
             display: flex;
             align-items: center;
-            width: 50%;
             margin-bottom: 16px;
+            width: 100%;
+            @include mq("tablet") {
+              width: 50%;
+            }
             i {
               font-size: 24px;
             }
@@ -3971,10 +4153,18 @@ body {
           font-size: 16px;
           font-weight: 500;
           display: flex;
-          width: max-content;
           border-radius: 8px;
           cursor: pointer;
-          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 48px;
+          width: 100%;
+          margin-top: 16px;
+          @include mq("tablet") {
+            width: max-content;
+            margin-top: 24px;
+          }
           &:hover {
             background-color: #f7f7f7;
             text-decoration: underline;
@@ -3984,6 +4174,10 @@ body {
       &-datetime {
         margin-top: 48px;
         padding-bottom: 48px;
+        display: none;
+        @include mq("tablet") {
+          display: block;
+        }
         &-heading {
           font-size: 22px;
           color: #222;
@@ -3993,13 +4187,17 @@ body {
           color: #717171;
           margin-top: 8px;
         }
+        img {
+          width: 100%;
+          margin-top: 24px;
+        }
       }
     }
-
     &-reviews {
       width: 100%;
       border-top: 1px solid #ddd;
       padding-top: 48px;
+      order: 6;
       &-point {
         display: flex;
         align-items: center;
@@ -4016,15 +4214,17 @@ body {
       }
       &-summary {
         margin-top: 32px;
-
         display: flex;
         flex-wrap: wrap;
         column-gap: 100px;
         row-gap: 16px;
         &-item {
-          display: flex;
           align-items: center;
-          width: calc(50% - 100px);
+          display: none;
+          @include mq("tablet") {
+            display: flex;
+            width: calc(50% - 100px);
+          }
           &-name {
             width: 85%;
             font-size: 16px;
@@ -4044,14 +4244,43 @@ body {
       }
       &-list {
         display: flex;
-        flex-wrap: wrap;
-        column-gap: 100px;
-        row-gap: 40px;
-        margin-top: 40px;
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        @include mq("tablet") {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          row-gap: 40px;
+          margin-top: 40px;
+        }
+        @include mq("desktop") {
+          flex-direction: row;
+          column-gap: 100px;
+        }
         &-item {
           display: flex;
           flex-direction: column;
-          width: calc(50% - 100px);
+          min-width: 85%;
+          scroll-snap-align: start;
+          border: 1px solid #ddd;
+          padding: 16px;
+          border-radius: 8px;
+          margin-left: 12px;
+          @include mq("tablet") {
+            min-width: 100%;
+            width: 100%;
+            border: unset;
+            padding: unset;
+            border-radius: unset;
+            margin-left: unset;
+          }
+          @include mq("desktop") {
+            min-width: calc(50% - 100px);
+            width: calc(50% - 100px);
+          }
           &-profile {
             display: flex;
             align-items: center;
@@ -4094,8 +4323,12 @@ body {
           width: max-content;
           border-radius: 8px;
           cursor: pointer;
-          margin-top: 24px;
-          margin-bottom: 40px;
+          margin-top: 8px;
+          margin-bottom: 24px;
+          @include mq("tablet") {
+            margin-top: 24px;
+            margin-bottom: 40px;
+          }
           &:hover {
             background-color: #f7f7f7;
             text-decoration: underline;
@@ -4106,7 +4339,19 @@ body {
     &-locationmap {
       width: 100%;
       border-top: 1px solid #ddd;
-      padding-top: 48px;
+      order: 5;
+      padding-bottom: 24px;
+      padding-top: 32px;
+      @include mq("tablet") {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+      iframe {
+        height: 250px;
+        @include mq("tablet") {
+          height: 480px;
+        }
+      }
       &-heading {
         font-size: 22px;
         color: #222;
@@ -4137,21 +4382,42 @@ body {
     }
     &-hosted {
       border-top: 1px solid #ddd;
-      margin-top: 40px;
+      margin-top: 0px;
+      order: 7;
+      @include mq("tablet") {
+        margin-top: 40px;
+      }
       &-owner {
-        margin-top: 48px;
+        margin-top: 24px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        @include mq("tablet") {
+          justify-content: unset;
+          margin-top: 48px;
+        }
+
         img {
-          width: 64px;
-          height: 64px;
+          width: 48px;
+          height: 48px;
           object-fit: cover;
           border-radius: 64px;
+          order: 2;
+          @include mq("tablet") {
+            order: 1;
+            width: 64px;
+            height: 64px;
+          }
         }
         &-profile {
           display: flex;
           flex-direction: column;
-          margin-left: 16px;
+          margin-left: unset;
+          order: 1;
+          @include mq("tablet") {
+            margin-left: 16px;
+            order: 2;
+          }
           &-name {
             font-size: 24px;
             line-height: 26px;
@@ -4162,24 +4428,42 @@ body {
           &-joineddate {
             font-size: 14px;
             line-height: 18px;
-            margin-top: 4px;
+            margin-top: 8px;
             color: #717171;
           }
         }
       }
       &-details {
         display: flex;
+        flex-direction: column;
         margin-bottom: 48px;
+        @include mq("tablet") {
+          flex-direction: row;
+        }
         &-left {
-          width: 50%;
+          width: 100%;
           margin-top: 24px;
+          @include mq("tablet") {
+            width: 50%;
+          }
           &-feature {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            @include mq("tablet") {
+              flex-direction: row;
+              align-items: center;
+            }
             &-item {
               margin-right: 24px;
               display: flex;
               align-items: center;
+              margin-top: 16px;
+              &:first-child {
+                margin-top: 0px;
+              }
+              @include mq("tablet") {
+                margin-top: unset;
+              }
               i {
                 font-size: 14px;
                 color: #ff385c;
@@ -4189,6 +4473,7 @@ body {
                 font-size: 16px;
                 line-height: 20px;
                 color: #222;
+                width: max-content;
               }
             }
           }
@@ -4197,6 +4482,13 @@ body {
             line-height: 20px;
             font-weight: 600;
             margin-top: 24px;
+            display: none;
+            @include mq("tablet") {
+              display: none;
+            }
+            @include mq("desktop") {
+              display: block;
+            }
             &-heading {
             }
             &-profile {
@@ -4237,8 +4529,21 @@ body {
           }
         }
         &-right {
-          width: 50%;
+          width: 100%;
           margin-top: 24px;
+          @include mq("tablet") {
+            width: 50%;
+            margin-left: 48px;
+          }
+          @include mq("desktop") {
+            margin-left: 48px;
+          }
+          @include mq("large") {
+            margin-left: 48px;
+          }
+          @media (min-width: 1300px) {
+            margin-left: unset;
+          }
           &-hostinfo {
             display: flex;
             flex-direction: column;
@@ -4254,11 +4559,18 @@ body {
             font-size: 16px;
             font-weight: 500;
             display: flex;
-            width: max-content;
             border-radius: 8px;
             cursor: pointer;
             margin-top: 24px;
-            margin-bottom: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            @include mq("tablet") {
+              width: max-content;
+              margin-bottom: 40px;
+            }
             &:hover {
               background-color: #f7f7f7;
               text-decoration: underline;
@@ -4267,17 +4579,28 @@ body {
           &-protectmoney {
             margin-top: 24px;
             display: flex;
+            flex-direction: row-reverse;
             align-items: center;
+            @include mq("tablet") {
+              flex-direction: row;
+            }
             i {
               font-size: 24px;
               color: #ffb400;
+              margin-left: 48px;
+              @include mq("tablet") {
+                margin-left: unset;
+              }
             }
             &-text {
-              width: 250px;
-              margin-left: 12px;
               font-size: 12px;
               line-height: 16px;
               color: #222;
+              width: 100%;
+              @include mq("tablet") {
+                width: 250px;
+                margin-left: 12px;
+              }
             }
           }
         }
@@ -4286,7 +4609,20 @@ body {
     &-thingtoknow {
       border-top: 1px solid #ddd;
       padding-top: 48px;
-      margin-bottom: 48px;
+      order: 8;
+      margin-bottom: 0px;
+      @include mq("tablet") {
+        margin-bottom: unset;
+      }
+      @include mq("desktop") {
+        margin-bottom: unset;
+      }
+      @include mq("large") {
+        margin-bottom: unset;
+      }
+      @media (min-width: 1300px) {
+        margin-left: 48px;
+      }
       &-heading {
         font-size: 22px;
         color: #222;
@@ -4294,9 +4630,25 @@ body {
       }
       &-boxes {
         display: flex;
+        flex-direction: column;
+        @include mq("tablet") {
+          flex-direction: row;
+        }
         &-box {
-          width: 33.33%;
+          width: 100%;
           padding-right: 40px;
+          margin-top: 24px;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 24px;
+          &:last-child {
+            border-bottom: 0px;
+          }
+          @include mq("tablet") {
+            width: 33.33%;
+            margin-top: 24px;
+            border-bottom: unset;
+            padding-bottom: unset;
+          }
           &:last-child {
             padding-right: 0px;
           }
@@ -4339,18 +4691,57 @@ body {
   }
 }
 .explore {
-  margin-top: 80px;
-  background-color: #f7f7f7;
-  padding-top: 96px;
+  margin-top: 24px;
+  padding-top: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  @include mq("tablet") {
+    padding-top: unset;
+    margin-top: unset;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f7f7f7;
+    border-top: unset;
+  }
+  @include mq("desktop") {
+    padding-top: 96px;
+    margin-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include mq("large") {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (min-width: 1300px) {
+    padding-left: unset;
+    padding-right: unset;
+  }
   .seperator {
     height: 1px;
     background-color: #ddd;
+    display: none;
+    @include mq("tablet") {
+      display: block;
+    }
   }
   .room-explore {
-    width: 1120px;
     padding: 48px 0px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
+    @include mq("tablet") {
+      width: 100%;
+    }
+    @include mq("desktop") {
+      width: 100%;
+    }
+    @include mq("large") {
+      width: 1120px;
+    }
     &-heading {
       font-size: 22px;
       color: #222;
@@ -4386,8 +4777,83 @@ body {
         font-size: 16px;
         line-height: 20px;
         color: #717171;
-        width: 25%;
+        width: 50%;
+        @include mq("tablet") {
+          width: 50%;
+        }
+        @include mq("desktop") {
+          width: 25%;
+        }
       }
+    }
+  }
+}
+
+.room_mobile_menu {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+    .menu_mobile_right {
+      display: flex;
+      align-items: center;
+      .icon-share {
+        font-size: 22px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.room-mobile-bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  @include mq("tablet") {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-left {
+    &-price {
+      span {
+        font-weight: 600;
+        font-size: 18px;
+      }
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &-date {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+  &-right {
+    &-button {
+      height: 48px;
+      background: linear-gradient(
+        to right,
+        #e61e4d 0%,
+        #e31c5f 50%,
+        #d70466 100%
+      ) !important;
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
     }
   }
 }
