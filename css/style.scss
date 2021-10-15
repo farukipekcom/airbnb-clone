@@ -1,26 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
 @import "./mixin.scss";
+@import "./airbnb.css";
 @font-face {
   font-family: "airbnb";
-  src: url("../font/airbnb.eot?58366028");
-  src: url("../font/airbnb.eot?58366028#iefix") format("embedded-opentype"),
-    url("../font/airbnb.woff2?58366028") format("woff2"),
-    url("../font/airbnb.woff?58366028") format("woff"),
-    url("../font/airbnb.ttf?58366028") format("truetype"),
-    url("../font/airbnb.svg?58366028#airbnb") format("svg");
+  src: url("../font/airbnb.eot?88214706");
+  src: url("../font/airbnb.eot?88214706#iefix") format("embedded-opentype"),
+    url("../font/airbnb.woff2?88214706") format("woff2"),
+    url("../font/airbnb.woff?88214706") format("woff"),
+    url("../font/airbnb.ttf?88214706") format("truetype"),
+    url("../font/airbnb.svg?88214706#airbnb") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'airbnb';
-    src: url('../font/airbnb.svg?58366028#airbnb') format('svg');
-  }
-}
-*/
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "airbnb";
@@ -38,15 +30,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down:before {
-  content: "\e800";
-} /* '' */
-.icon-arrow-left:before {
-  content: "\e801";
-} /* '' */
-.icon-arrow-right:before {
-  content: "\e802";
-} /* '' */
 .icon-country:before {
   content: "\e803";
 } /* '' */
@@ -77,6 +60,102 @@
 .icon-user:before {
   content: "\e80c";
 } /* '' */
+.icon-superhost:before {
+  content: "\e80d";
+} /* '' */
+.icon-share:before {
+  content: "\e80e";
+} /* '' */
+.icon-9dots:before {
+  content: "\e80f";
+} /* '' */
+.icon-superhostv2:before {
+  content: "\e810";
+} /* '' */
+.icon-home:before {
+  content: "\e811";
+} /* '' */
+.icon-clean:before {
+  content: "\e812";
+} /* '' */
+.icon-door:before {
+  content: "\e813";
+} /* '' */
+.icon-calendar:before {
+  content: "\e814";
+} /* '' */
+.icon-discount:before {
+  content: "\e815";
+} /* '' */
+.icon-beach:before {
+  content: "\e816";
+} /* '' */
+.icon-wifi:before {
+  content: "\e817";
+} /* '' */
+.icon-petv2:before {
+  content: "\e818";
+} /* '' */
+.icon-alarmv2:before {
+  content: "\e819";
+} /* '' */
+.icon-kitchen:before {
+  content: "\e81a";
+} /* '' */
+.icon-car:before {
+  content: "\e81b";
+} /* '' */
+.icon-tv:before {
+  content: "\e81c";
+} /* '' */
+.icon-balcony:before {
+  content: "\e81d";
+} /* '' */
+.icon-alarm:before {
+  content: "\e81e";
+} /* '' */
+.icon-verified:before {
+  content: "\e81f";
+} /* '' */
+.icon-hostv2:before {
+  content: "\e820";
+} /* '' */
+.icon-time:before {
+  content: "\e821";
+} /* '' */
+.icon-doorv2:before {
+  content: "\e822";
+} /* '' */
+.icon-pet:before {
+  content: "\e823";
+} /* '' */
+.icon-smoke:before {
+  content: "\e824";
+} /* '' */
+.icon-fresh:before {
+  content: "\e829";
+} /* '' */
+.icon-spray:before {
+  content: "\e82a";
+} /* '' */
+.icon-question:before {
+  content: "\e82b";
+} /* '' */
+.icon-snow:before {
+  content: "\e82c";
+} /* '' */
+.icon-report:before {
+  content: "\e82d";
+} /* '' */
+.icon-arrow-left:before {
+  content: "\e82e";
+} /* '' */
+.icon-arrow-right:before {
+  content: "\e830";
+} /* '' */
+.icon-arrow-bottom:before {
+  content: "\e833";
+} /* '' */
 html {
   overflow: scroll;
 }
@@ -3440,6 +3519,9 @@ body {
           i {
             font-size: 14px;
           }
+          .icon-share {
+            font-size: 20px;
+          }
           &-share {
             margin-left: 8px;
             text-decoration: underline;
@@ -3573,6 +3655,7 @@ body {
         position: sticky;
         top: 120px;
         margin-bottom: 48px;
+        height: 100%;
         &-card {
           box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
           border: 1px solid #ddd;
@@ -3867,6 +3950,9 @@ body {
             align-items: center;
             width: 50%;
             margin-bottom: 16px;
+            i {
+              font-size: 24px;
+            }
             &-name {
               margin-left: 16px;
               line-height: 20px;
@@ -4182,6 +4268,10 @@ body {
             margin-top: 24px;
             display: flex;
             align-items: center;
+            i {
+              font-size: 24px;
+              color: #ffb400;
+            }
             &-text {
               width: 250px;
               margin-left: 12px;
@@ -4206,6 +4296,10 @@ body {
         display: flex;
         &-box {
           width: 33.33%;
+          padding-right: 40px;
+          &:last-child {
+            padding-right: 0px;
+          }
           &-heading {
             font-size: 16px;
             line-height: 20px;
