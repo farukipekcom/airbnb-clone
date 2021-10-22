@@ -156,12 +156,37 @@
 .icon-arrow-bottom:before {
   content: "\e833";
 } /* '' */
+
 html {
   overflow: scroll;
 }
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
+}
+@include mq("tablet") {
+  html {
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(202, 202, 202);
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(151, 151, 151);
+  }
 }
 
 * {
@@ -479,7 +504,6 @@ body {
             margin-left: 5px;
             font-size: 32px;
             color: gray;
-            margin-right: -5px;
           }
           &:hover {
             background-color: #fff;
@@ -743,6 +767,7 @@ body {
         color: #c6017e;
         font-weight: 800;
         font-size: 19px;
+        width: max-content;
         @include mq("tablet") {
           width: 200px;
           height: 64px;
@@ -1575,7 +1600,9 @@ body {
           line-height: 18px;
           font-weight: 300;
           font-weight: #222;
-          text-align: center;
+          a {
+            display: inline-block;
+          }
           @include mq("tablet") {
             text-align: left;
           }
@@ -1906,7 +1933,7 @@ body {
       }
       img {
         width: 100%;
-        min-height: 800px;
+        min-height: 100vh;
         object-fit: cover;
       }
     }
@@ -1938,6 +1965,7 @@ body {
         height: 48px;
         align-items: center;
         color: #000;
+        width: max-content;
         svg {
           margin-left: -12px;
           font-size: 34px;
@@ -2451,17 +2479,21 @@ body {
         font-size: 15px;
         line-height: 18px;
         margin-top: 24px;
-        text-align: right;
+        text-align: left;
         display: flex;
-        align-items: center;
         @include mq("tablet") {
           text-align: left;
+        }
+        span {
+          width: max-content;
         }
         a {
           color: #222;
           font-size: 14px;
           margin-left: 5px;
           text-decoration: underline;
+          display: inline-block;
+          width: max-content;
         }
       }
     }
@@ -2989,9 +3021,17 @@ body {
       background-color: #e0e0e0;
       margin-left: 8px;
       margin-right: 8px;
+      display: none;
+      @include mq("tablet") {
+        display: block;
+      }
     }
     .online_experiences_right {
       width: 100%;
+      display: none;
+      @include mq("tablet") {
+        display: block;
+      }
       .online_experiences_right_item {
         font-size: 15px;
         font-weight: 300;
@@ -3426,6 +3466,11 @@ a {
       padding: 12px;
       border-radius: 50px;
       background-color: white;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       i {
         font-size: 19px;
         color: black;

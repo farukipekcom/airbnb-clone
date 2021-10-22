@@ -243,7 +243,28 @@ html {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
-  /* make scrollbar transparent */
+}
+
+@media (min-width: 744px) {
+  html {
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cacaca;
+    border-radius: 8px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #979797;
+  }
 }
 
 * {
@@ -759,7 +780,6 @@ body {
   margin-left: 5px;
   font-size: 32px;
   color: gray;
-  margin-right: -5px;
 }
 
 .main .container .header .profile .active_profile:hover {
@@ -1211,6 +1231,9 @@ body {
   color: #c6017e;
   font-weight: 800;
   font-size: 19px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @media (min-width: 744px) {
@@ -2534,7 +2557,10 @@ body {
   line-height: 18px;
   font-weight: 300;
   font-weight: #222;
-  text-align: center;
+}
+
+.stays .container .left .stays_header .sub_information a {
+  display: inline-block;
 }
 
 @media (min-width: 744px) {
@@ -3042,7 +3068,7 @@ body {
 
 .stays .container .right img {
   width: 100%;
-  min-height: 800px;
+  min-height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -3088,6 +3114,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .menu_mobile .container .menu_mobile_left a svg {
@@ -3802,13 +3831,10 @@ body {
   font-size: 15px;
   line-height: 18px;
   margin-top: 24px;
-  text-align: right;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (min-width: 744px) {
@@ -3817,11 +3843,21 @@ body {
   }
 }
 
+.experience .container .experience_heading_details .experience_subinfo span {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .experience .container .experience_heading_details .experience_subinfo a {
   color: #222;
   font-size: 14px;
   margin-left: 5px;
   text-decoration: underline;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .experience .container .flexible_cities {
@@ -4554,10 +4590,24 @@ body {
   background-color: #e0e0e0;
   margin-left: 8px;
   margin-right: 8px;
+  display: none;
+}
+
+@media (min-width: 744px) {
+  .online_experiences_filter .container .online_experiences_center {
+    display: block;
+  }
 }
 
 .online_experiences_filter .container .online_experiences_right {
   width: 100%;
+  display: none;
+}
+
+@media (min-width: 744px) {
+  .online_experiences_filter .container .online_experiences_right {
+    display: block;
+  }
 }
 
 .online_experiences_filter .container .online_experiences_right .online_experiences_right_item {
@@ -5135,6 +5185,17 @@ a .carousel-cell .city_slider_item .experience_details .experience_third .experi
   padding: 12px;
   border-radius: 50px;
   background-color: white;
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wanderlust_mobile_menu .container a i {
