@@ -243,6 +243,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #fff;
     .logo2 {
       flex: 1;
       display: none;
@@ -250,6 +251,7 @@ body {
         display: flex;
       }
       a {
+        width: max-content;
         svg {
           color: #ff385c;
         }
@@ -576,6 +578,7 @@ body {
           flex-direction: column;
           align-items: center;
           position: relative;
+          width: max-content;
           &:hover {
             opacity: 0.8;
           }
@@ -1373,6 +1376,7 @@ body {
         display: flex;
       }
       a {
+        width: max-content;
         svg {
           color: #ff385c;
         }
@@ -3406,6 +3410,7 @@ a {
         display: flex;
       }
       a {
+        width: max-content;
         svg {
           color: #fff;
         }

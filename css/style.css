@@ -346,6 +346,7 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: #fff;
 }
 
 .sticky_menu .container .logo2 {
@@ -361,6 +362,12 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.sticky_menu .container .logo2 a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .sticky_menu .container .logo2 a svg {
@@ -899,6 +906,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .main .container .menu2 li a:hover {
@@ -2197,6 +2207,12 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.menu_other .container .logo2 a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .menu_other .container .logo2 a svg {
@@ -5105,6 +5121,12 @@ a .carousel-cell .city_slider_item .experience_details .experience_third .experi
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.wanderlust_menu .container .logo2 a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .wanderlust_menu .container .logo2 a svg {
